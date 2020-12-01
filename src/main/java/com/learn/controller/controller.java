@@ -6,17 +6,15 @@ import com.learn.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
 
-@RestController
+@Controller
 class mycontroller {
 
 
@@ -40,16 +38,33 @@ class mycontroller {
     public String login()
     {
 
-            return "redirect:/main";
+        return "redirect:/main";
     }
     @Autowired
     private UserMapper userMapper;
 
     @RequestMapping("/getAllUaer")
-    public List<User> getUser()
+    public String getAllUser(Model model)
     {
         List<User> list=userMapper.querUserList();
-        return list;
+        for (User user: list)
+        {
+            System.out.println(user.toString());
+        }
+        model.addAttribute("userAll",list);
+        return "/pages/user";
+    }
+    @RequestMapping("/getUser")
+    public String getUser(Model model)
+    {
+        User user=userMapper.querUserByName("郭凡");
+        System.out.println(user.toString());
+        return "pages//user";
+    }
+    @RequestMapping("/getPiugin")
+    public String getPiugin()
+    {
+        return "/pages/piugin";
     }
 
 }

@@ -12,7 +12,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
-        System.out.println("注册拦截器=====================================================");
+
        //registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","/getUser","/","/css/*","/js/*","/img/*","/webfonts/*");
         }
 

@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://qds168257330.my3w.com
+    username: qds168257330
+    password: guofan6889168
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+# 整合mybatis
+mybatis:
+  type-aliases-package: com.learn.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
