@@ -4,20 +4,19 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.learn.mapper.UserMapper">
    <select id="querUserList" resultType="User">
-    select * from [user]
+    select * from [user] order by id
    </select>
 
-    <select id="querUserByName" resultType="User">
-    select * from [user] where name=#{name}
+    <select id="querUserById" resultType="User">
+    select * from [user] where id=#{id}
    </select>
-
     <insert id="addUser" parameterType="User">
-        insert into [user] (name,password,image),values(#{name},#{name},#{image})
+        insert into [user] (name,password,birthday,age,sex,education) values (#{name},#{password},#{birthday},#{age},#{sex},#{education})
     </insert>
     <update id="updateUser" parameterType="User">
-        update [user] set name=#{name},password=#{password},image=#{image} where name=#{name}
+        update [user] set name=#{name},password=#{password},birthday=#{birthday},age=#{age},sex=#{sex},education=#{education} where id=#{id}
     </update>
-    <delete id="deleteUser" parameterType="String">
-        delete from [user] where name=#{name}
+    <delete id="deleteUser" parameterType="int">
+        delete from [user] where id=#{id}
     </delete>
 </mapper>

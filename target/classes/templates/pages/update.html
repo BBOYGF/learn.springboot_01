@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Starter</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">-->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" th:href="@{../css/all.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{../css/adminlte.min.css}">
+</head>
+<body>
+<div class="wrapper">
+    <!-- 头部导航 -->
+    <div th:insert="~{pages/piugin :: headBar}"></div>
+    <!--左侧导航-->
+    <div th:insert="~{pages/piugin :: leftBar}"></div>
+    <!--添加表单-->
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Starter Page</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Starter Page</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div>
+        </div>
+        <div class="content">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">添加员工</h3>
+                </div>
+                <form th:action="@{/updateUser}" method="post" >
+                    <div class="card-body">
+                        <div class="form-group" hidden="hidden">
+                            <label>id</label>
+                            <input type="text" class="form-control" name="id" th:value="${user.id}">
+                        </div>
+                        <div class="form-group">
+                            <label>姓名</label>
+                            <input type="text" class="form-control" name="name" th:value="${user.name}">
+                        </div>
+                        <div class="form-group">
+                            <label>密码</label>
+                            <input type="text" class="form-control" name="Password" th:value="${user.password}">
+                        </div>
+                        <div class="form-group">
+                            <label>出生年月日</label>
+                            <input type="text" class="form-control" name="birthday" th:value="${user.birthday}">
+                        </div>
+                        <div class="form-group">
+                            <label>年龄</label>
+                            <input type="number" class="form-control" name="age" th:value="${user.age}">
+                        </div>
+                        <div class="form-group">
+                            <label>性别</label>
+                            <select class="form-control" name="sex" th:selected="${user.sex}">
+                                <option th:text="女" value=1></option>
+                                <option th:text="男" value=2></option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>学历</label>
+                            <select class="form-control" name="education" th:selected="${user.education}">
+                                <option th:each="education:${educations}" th:text="${education.getName()}" th:value="${education.id}"></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">File input</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="exampleInputFile">
+                                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Upload</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+        <div class="p-3">
+            <h5>Title</h5>
+            <p>Sidebar content</p>
+        </div>
+    </aside>
+</div>
+<script th:src="@{../js/jquery.min.js}"></script>
+<!-- Bootstrap 4 -->
+<script th:src="@{../js/bootstrap.bundle.min.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{../js/adminlte.min.js}"></script>
+</body>
+</html>

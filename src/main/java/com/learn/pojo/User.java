@@ -1,5 +1,6 @@
 package com.learn.pojo;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,5 +11,9 @@ import lombok.NoArgsConstructor;
 public class User {
     private String name;
     private String password;
-    private String image;
+    private int age;
+    private int sex;
+    private int education;
+    public int id;
+    private String birthday;
 }

@@ -24,7 +24,6 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">请登陆进行会话</p>
       <p class="login-box-msg" th:text="${msg}" th:if="${ not #strings.isEmpty(msg)}" style="color: #c62232"></p>
-
       <form th:action="@{/login}" method="post">
         <div class="input-group mb-3">
           <input type="email" class="form-control" name="username" placeholder="请输入账号" th:value="#{username}" >
@@ -58,8 +57,6 @@
           <!-- /.col -->
         </div>
       </form>
-
-
     </div>
     <!-- /.login-card-body -->
   </div>

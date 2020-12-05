@@ -11,8 +11,8 @@ import java.util.List;
 @Repository
 public interface UserMapper {
     List<User> querUserList();
-    User querUserByName(String name);
+    User querUserById(int id);
     int addUser(User user);
     int updateUser(User user);
-    int deleteUser(String name);
+    int deleteUser(int id);
 }

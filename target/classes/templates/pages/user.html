@@ -17,7 +17,7 @@
   <!-- 头部导航 -->
   <div th:insert="~{pages/piugin :: headBar }"></div>
   <!--左侧导航-->
-  <div th:insert="~{pages/piugin :: leftBar}"></div>
+  <div th:insert="~{pages/piugin :: leftBar (active='1')}"></div>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -25,10 +25,10 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Simple Tables</h1>
+          <div class="col-sm-2">
+            <a class="btn btn-primary" th:href="@{/adduser}">添加员工</a>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6 offset-4">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">Simple Tables</li>
@@ -64,16 +64,39 @@
                 <table class="table table-head-fixed text-nowrap">
                   <thead>
                     <tr>
+                      <th>ID</th>
                       <th>姓名</th>
                       <th>密码</th>
-                      <th>图片</th>
-                    </tr>
+                      <th>年龄</th>
+                      <th>学历</th>
+                      <th>生日</th>
+                      <th>性别</th>
+                      <th>操作</th>
+                      </tr>
                   </thead>
                   <tbody>
                     <tr th:each="user:${userAll}">
-                      <td th:text="${user.getName()}"></td>
+                      <td >[[${user.id}]]</td>
+                      <td >[[${user.getName()}]]</td>
                       <td >[[${user.getPassword()}]]</td>
-                      <td>[[${user.getImage()}]]</td>
+                      <td>[[${user.age}]]</td>
+                      <td >
+                        <div th:switch="${user.education}">
+                          <p th:case=1>初中</p>
+                          <p th:case=2>高中</p>
+                          <p th:case=3>大专</p>
+                          <p th:case=4>本科</p>
+                          <p th:case=5>硕士</p>
+                          <p th:case=6>博士</p>
+                        </div>
+                      </td>
+                      <td >[[${user.birthday}]]</td>
+                      <td th:text="${user.sex==1? '女':'男'}"></td>
+                      <td >
+                        <a class="btn btn-primary " th:href="@{/updateUser/}+${user.id}" th:method="get">编辑</a>
+                        <a class="btn btn-danger " th:href="@{/delete/}+${user.id}">删除</a>
+                      </td>
+
                     </tr>
                   </tbody>
                 </table>
