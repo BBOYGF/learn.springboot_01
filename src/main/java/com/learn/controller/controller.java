@@ -5,6 +5,11 @@ import com.learn.bean.Education;
 import com.learn.mapper.UserMapper;
 import com.learn.pojo.User;
 import com.learn.service.myData;
+import com.sun.org.glassfish.external.probe.provider.annotations.ProbeParam;
+import org.apache.batik.transcoder.TranscoderException;
+import org.apache.batik.transcoder.TranscoderInput;
+import org.apache.batik.transcoder.TranscoderOutput;
+import org.apache.batik.transcoder.image.PNGTranscoder;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,14 +21,19 @@ import org.springframework.util.ClassUtils;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import sun.misc.BASE64Decoder;
+import sun.misc.UUDecoder;
 
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -132,5 +142,33 @@ class mycontroller {
         System.out.println("file是:"+request.getSession().getServletContext().getRealPath(""));
         return "redirect:/getAllUaer";
     }
+    @ResponseBody
+    @PostMapping("/upload2")
+    public String upload2( String fileStr) throws IOException, TranscoderException {
 
+        System.out.println(fileStr);
+        String fileName=savePic(fileStr);
+        return  fileName;
+    }
+    public String savePic(String base64) throws IOException, TranscoderException {
+        //定义一个字节数组
+        byte[] imageByte;
+        BASE64Decoder decoder=new BASE64Decoder();//创建一个解码类
+        imageByte=decoder.decodeBuffer(base64);//解码为字节数组
+        ByteArrayInputStream bis=new ByteArrayInputStream(imageByte);//将字节数组转换为字节数组流
+        TranscoderInput transcoderInput = new TranscoderInput(bis);//将流转换为图片流
+        PNGTranscoder pngTranscoder = new PNGTranscoder();//创建PNG转换流
+        // 文件名称可根据自己的业务需求自定
+        String s = UUID.randomUUID().toString().replace("-", "");//获取随机名称
+        String fileName = s + ".png";
+        // 文件路径也可以根据自己的需求自定义
+        File outputfile = new File("D:\\Desktop\\" + fileName);
+
+        FileOutputStream pngFileStream = new FileOutputStream(outputfile);
+
+        TranscoderOutput outputPngImage = new TranscoderOutput(pngFileStream);
+        pngTranscoder.transcode(transcoderInput, outputPngImage);
+        return fileName;
+
+    }
 }

@@ -86,7 +86,7 @@
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="file">
-                                    <label class="custom-file-label" text="选择文件"></label>
+                                    <label class="custom-file-label" text="选择文件" placeholder="2020-01-01"></label>
                                 </div>
                                 <div class="input-group-append">
                                     <button type="submit" class="input-group-text">上传</button>
@@ -108,7 +108,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <button id="re"        class="btn btn-success"  type="button" >清除</button>
+                            <button id="re"        class="btn btn-success"  type="button" onclick="myclear()">清除</button>
                             <button id="canvasBtn"  class="btn btn-primary" type="button" onclick="save()">完成</button>
 
                         </div>
@@ -140,90 +140,39 @@
     $(function () {
         //画布初始化 transparent去除初始化的下划线
         //lineWidth 设置画笔粗细为2
-        $("#canvas").jSignature({width: '100%', height: 300, "decor-color": "transparent", lineWidth: '2' ,background:'#222222'});
+        $("#canvas").jSignature({width: '100%', height: 300, "decor-color": "transparent", lineWidth: '10' ,background:'#fff'});
     });
+    function myclear()
+    {
+        $("#canvas").jSignature("clear");
+    }
 
     function save() {
-        //先将图片保存到服务器，在把其他表单数据提交到服务器（具体如何关联取决业务）
-        saveImage();
-        saveForm();
-    }
+        //将图片转换成base64位数据格式
+        var data = $("#canvas").jSignature("getData", "svgbase64");
+        var f = new FormData();//FormData对象用以将数据编译成键值对
+        f.append("fileStr", data[1]);//装换为键值对的对象
 
-    //点击事件为获取base64数据，生成图片
-    document.getElementById("su").onclick = function () {
-        //getData:获取数据
-        //reset：复位/重置
-        // 获取签名的“base64”数据对
-        var datapair = $("#canvas").jSignature("getData", "image");
-        //此处打印的是完整的base64转码，可以复制后去在线转码测试一下是否正常
-        console.log('data:' + datapair[0] + "," + datapair[1])
-        //将图片展示出来
-        $("#image").attr('src', 'data:' + datapair[0] + "," + datapair[1]);
-    }
-    //生成图片之后我们就可以进行相应的操作
-
-    //点击事件为重置画板
-    document.getElementById("re").onclick = function () {
-        $("#canvas").jSignature("reset");
-        $("#image").attr('src', '');
-    }
-    var url = '';//设置你们的url
-    //保存整个表单在此之前已经将图片上传到服务器了
-    function saveForm() {
+        //使用ajax发送数据
         $.ajax({
-            cache: true,
-            type: "POST",
-            url: url,
-            data: $('#form').serialize(), // 你的formid
-            async: false,
-            error: function (request) {
-                alert("网络超时");
+            url:"/upload2",
+            method:'post',
+            data: f,
+            contentType: false,
+            processData: false,
+            success:function (r) {
+                //返回数据
+                console.log("测试返回数据！文件名是："+r);
             },
-            success: function (data) {
-                console.log(data)
+            error: function (e) {
+                alert("服务器异常");
             }
         });
     }
 
-    //重点来了，该方法将Base64格式转换成流格式
-    function base64toFile(dataurl, filename) {
-        let arr = dataurl.split(',')
-        let mime = arr[0].match(/:(.*?);/)[1]
-        let suffix = mime.split('/')[1]
-        let bstr = atob(arr[1])
-        let n = bstr.length
-        let u8arr = new Uint8Array(n)
-        while (n--) {
-            u8arr[n] = bstr.charCodeAt(n)
-        }
-        return new File([u8arr], `${filename}.${suffix}`, {
-            type: mime
-        })
-    }
 
-    function saveImage() {
-        var url = '';//设置你们的url
-        var datapair = $("#box").jSignature("getData", "image");  //将canvas里面的数据转换成base64数组
-        var imgBase64 = 'data:' + datapair[0] + "," + datapair[1];  //封装成正确的base64
-        var file = base64toFile(imgBase64, 'file');     //base64转换成流文件，可以打印出来看下
-        let formData = new FormData()            //封装成formData格式
-        formData.append('type', 97);
-        formData.append('file', file)
-        $.ajax({
-            contentType: false,   //不可少
-            processData: false,   //不可少
-            type: "POST",
-            url: url,
-            data: formData,
-            async: false,
-            error: function (request) {
-                alert("网络超时");
-            },
-            success: function (data) {
-                console.log(data)
-            }
-        });
-    }
+
+
 
 </script>
 </body>
