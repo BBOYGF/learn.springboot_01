@@ -162,7 +162,7 @@ class mycontroller {
         String s = UUID.randomUUID().toString().replace("-", "");//获取随机名称
         String fileName = s + ".png";
         // 文件路径也可以根据自己的需求自定义
-        File outputfile = new File("D:\\Desktop\\" + fileName);
+        File outputfile = new File("D:/Desktop/" + fileName);
 
         FileOutputStream pngFileStream = new FileOutputStream(outputfile);
 
