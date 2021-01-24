@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html lang="en"  xmlns:th="http://www.thymeleaf.org" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,9 +17,11 @@
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- 头部导航 -->
-  <div th:insert="~{pages/piugin :: headBar}"></div>
+  <div th:insert="~{pages/piugin :: headBar}" ></div>
   <!--左侧导航-->
-  <div th:insert="~{pages/piugin :: leftBar}"></div>
+  <div sec:authorize="isAuthenticated()">
+    <div th:insert="~{pages/piugin :: leftBar}" ></div>
+  </div>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->

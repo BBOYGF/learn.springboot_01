@@ -1,6 +1,4 @@
 package com.learn.controller;
-
-
 import com.learn.bean.Education;
 import com.learn.mapper.UserMapper;
 import com.learn.pojo.User;
@@ -37,44 +35,41 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-
-
 @Controller
 class mycontroller {
 
     @Autowired
     myData mydata;
-    @RequestMapping("/login")
-    public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model, HttpSession session)
+    @PostMapping("/login")
+    public String login( @RequestParam("username") String username, @RequestParam("password") String password, Model model, HttpSession session)
     {
-        System.out.println("密码是："+password);
-        if(password.equals("123"))
-        {
+
+//        System.out.println("密码是："+password);
+////        if(password.equals("123"))
+////        {
             System.out.println("密码正确！");
             session.setAttribute("loginUser",username);
-            return "redirect:/main";
-        }else {
-            System.out.println("密码错误！！");
-            model.addAttribute("msg","用户名或者密码错误！");
-            return "pages/login";
-        }
-
+             System.out.println("用户名是："+username);
+            return "pages/index";
+//        }else {
+//            System.out.println("密码错误！！");
+//            model.addAttribute("msg","用户名或者密码错误！");
+//            return "pages/login";
+//        }
     }
     @RequestMapping("/index")
-    public String login()
+    public String index()
     {
-
         return "redirect:/main";
     }
     @Autowired
     private UserMapper userMapper;
-
-    @RequestMapping("/getAllUaer")
+    @RequestMapping("/getAllUser")
     public String getAllUser(Model model)
     {
         List<User> list=userMapper.querUserList();
         model.addAttribute("userAll",list);
-        return "/pages/user";
+        return "pages/user";
     }
 
     @RequestMapping("/getPiugin")

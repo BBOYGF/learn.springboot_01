@@ -8,8 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginHandlerInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        Object loginUser= request.getSession().getAttribute("loginUser");
 
+        Object loginUser= request.getSession().getAttribute("username");
+        System.out.println("拦截一下"+loginUser);
         if(loginUser==null)
         {
             request.getRequestDispatcher("/").forward(request,response);
