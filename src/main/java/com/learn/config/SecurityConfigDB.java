@@ -1,24 +1,35 @@
 package com.learn.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-//@EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+@EnableWebSecurity
+public class SecurityConfigDB extends WebSecurityConfigurerAdapter {
+    //自动注入userDetailsService
+    @Autowired
+    private UserDetailsService userDetailsService;
     //授权
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        //首页所有人都能访问功能只能有权限的人访问
+        //配置读取设置
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/adduser","/index","/main").hasAnyRole("vip1")
                 .antMatchers("/getAllUser","/index","/main").hasAnyRole("guofan");
-        System.out.println("授权了！");
-        http.formLogin().loginPage("/toLogin").loginProcessingUrl("/login").usernameParameter("username").passwordParameter("password");
+        System.out.println("授权了！=======================");
+        http.formLogin().loginPage("/toLogin").
+                loginProcessingUrl("/login")
+                .usernameParameter("username")
+                .passwordParameter("password")
+                .defaultSuccessUrl("/").permitAll()
+        ;
         http.rememberMe();
 
     }
@@ -26,11 +37,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     //密码编码
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-       auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder())
-               .withUser("guofan").password(new BCryptPasswordEncoder().encode("456")).roles("guofan")
-        .and().withUser("15").password(new BCryptPasswordEncoder().encode("")).roles("vip1");
-
-        UserDetailsService defaultUserDetailsService = auth.getDefaultUserDetailsService();
-
+       auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+        System.out.println("认证了！=====================================");
+    }
+    @Bean
+    PasswordEncoder passwordEncoder()
+    {
+        return new BCryptPasswordEncoder();
     }
 }
