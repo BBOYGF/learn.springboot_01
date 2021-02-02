@@ -19,4 +19,7 @@
     <delete id="deleteUser" parameterType="int">
         delete from [user] where id=#{id}
     </delete>
+    <select id="getUserByName" resultType="com.learn.pojo.User">
+        select * from  [user] where name=#{name}
+    </select>
 </mapper>

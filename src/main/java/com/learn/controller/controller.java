@@ -4,6 +4,8 @@ import com.learn.mapper.UserMapper;
 import com.learn.pojo.User;
 import com.learn.service.myData;
 import com.sun.org.glassfish.external.probe.provider.annotations.ProbeParam;
+import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.batik.transcoder.TranscoderException;
 import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
@@ -35,6 +37,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+@Slf4j
 @Controller
 class mycontroller {
 
@@ -69,6 +72,7 @@ class mycontroller {
     {
         List<User> list=userMapper.querUserList();
         model.addAttribute("userAll",list);
+        log.info("测试log");
         return "pages/user";
     }
 

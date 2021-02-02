@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/adduser","/index","/main").hasAnyRole("vip1")
-                .antMatchers("/getAllUser","/index","/main").hasAnyRole("guofan");
+                .antMatchers("/getAllUser","/","/main").hasAnyRole("guofan");
         System.out.println("授权了！");
         http.formLogin().loginPage("/toLogin").loginProcessingUrl("/login").usernameParameter("username").passwordParameter("password");
         http.rememberMe();
@@ -29,7 +29,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
        auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder())
                .withUser("guofan").password(new BCryptPasswordEncoder().encode("456")).roles("guofan")
         .and().withUser("15").password(new BCryptPasswordEncoder().encode("")).roles("vip1");
-
         UserDetailsService defaultUserDetailsService = auth.getDefaultUserDetailsService();
 
     }
