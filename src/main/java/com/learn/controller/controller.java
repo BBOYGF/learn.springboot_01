@@ -63,6 +63,8 @@ class mycontroller {
     @RequestMapping("/index")
     public String index()
     {
+
+
         return "redirect:/main";
     }
     @Autowired

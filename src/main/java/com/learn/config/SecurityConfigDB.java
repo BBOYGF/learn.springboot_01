@@ -22,7 +22,7 @@ public class SecurityConfigDB extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/adduser","/index","/main").hasAnyRole("vip1")
-                .antMatchers("/getAllUser","/index","/main").hasAnyRole("guofan");
+                .antMatchers("/getAllUser","/index","/main","/adduser").hasAnyRole("guofan");
         System.out.println("授权了！=======================");
         http.formLogin().loginPage("/toLogin").
                 loginProcessingUrl("/login")

@@ -22,7 +22,6 @@ public class MyUserDetailsService implements UserDetailsService {
         System.out.println("输入的是："+s);
         com.learn.pojo.User user = userMapper.getUserByName(s);
         System.out.println(user.toString());
-
         List<GrantedAuthority> auths= AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_guofan");
         return new User(user.getName(),new BCryptPasswordEncoder().encode(user.getPassword()),auths);
     }

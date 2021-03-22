@@ -1,0 +1,1489 @@
+2021-02-02 23:35:27,058 INFO (StartupInfoLogger.java:50)- Starting Main on BF-202101082230 with PID 12052 (E:\learn_day\learn.springboot_01\target\classes started by Administrator in E:\learn_day\learn.springboot_01)
+2021-02-02 23:35:27,059 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2021-02-02 23:35:27,132 INFO (AbstractApplicationContext.java:592)- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d95f4fa: startup date [Tue Feb 02 23:35:27 CST 2021]; root of context hierarchy
+2021-02-02 23:35:28,443 INFO (TomcatWebServer.java:91)- Tomcat initialized with port(s): 8080 (http)
+2021-02-02 23:35:28,453 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2021-02-02 23:35:28,463 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2021-02-02 23:35:28,464 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.39
+2021-02-02 23:35:28,467 INFO (DirectJDKLog.java:180)- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java se\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\java se\bin;D:\Git\bin;E:\apache-tomcat-7.0.105\bin;E:\node\;E:\python\Scripts\;E:\python\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;.]
+2021-02-02 23:35:28,534 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2021-02-02 23:35:28,535 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 1404 ms
+2021-02-02 23:35:28,609 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-02-02 23:35:28,610 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-02-02 23:35:28,610 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-02-02 23:35:28,610 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'requestContextFilter' to: [/*]
+2021-02-02 23:35:28,610 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-02-02 23:35:28,611 INFO (ServletRegistrationBean.java:187)- Servlet dispatcherServlet mapped to [/]
+2021-02-02 23:35:29,206 INFO (DefaultSecurityFilterChain.java:43)- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c333ff, org.springframework.security.web.context.SecurityContextPersistenceFilter@665a3ac, org.springframework.security.web.header.HeaderWriterFilter@7b3e04f6, org.springframework.security.web.csrf.CsrfFilter@5ac7f070, org.springframework.security.web.authentication.logout.LogoutFilter@7e5c1bc0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@25a40db2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@542dea25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fc5ea4e, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@59efb4c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@585cd9c2, org.springframework.security.web.session.SessionManagementFilter@74a974d3, org.springframework.security.web.access.ExceptionTranslationFilter@320a49a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@170568a8]
+2021-02-02 23:35:29,275 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-02 23:35:29,405 INFO (RequestMappingHandlerAdapter.java:589)- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d95f4fa: startup date [Tue Feb 02 23:35:27 CST 2021]; root of context hierarchy
+2021-02-02 23:35:29,448 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/index]}" onto public java.lang.String com.learn.controller.mycontroller.index()
+2021-02-02 23:35:29,451 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.update(int,org.springframework.ui.Model)
+2021-02-02 23:35:29,451 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.update(com.learn.pojo.User)
+2021-02-02 23:35:29,451 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/delete/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.delete(int)
+2021-02-02 23:35:29,452 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.addUser(org.springframework.ui.Model)
+2021-02-02 23:35:29,452 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload2],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload2(java.lang.String) throws java.io.IOException,org.apache.batik.transcoder.TranscoderException
+2021-02-02 23:35:29,452 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.addUsers(com.learn.pojo.User)
+2021-02-02 23:35:29,452 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getPiugin]}" onto public java.lang.String com.learn.controller.mycontroller.getPiugin()
+2021-02-02 23:35:29,452 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2021-02-02 23:35:29,453 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.login(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2021-02-02 23:35:29,453 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getAllUser]}" onto public java.lang.String com.learn.controller.mycontroller.getAllUser(org.springframework.ui.Model)
+2021-02-02 23:35:29,455 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-02-02 23:35:29,456 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-02-02 23:35:29,465 INFO (AbstractUrlHandlerMapping.java:359)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-02-02 23:35:29,465 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/toLogin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-02-02 23:35:29,476 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-02 23:35:29,476 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-02 23:35:29,539 WARN (ThymeleafAutoConfiguration.java:337)- Auto-configuration for thymeleaf-extras-springsecurity4 is deprecated in favour of thymeleaf-extras-springsecurity5
+2021-02-02 23:35:29,764 INFO (OptionalLiveReloadServer.java:57)- LiveReload server is running on port 35729
+2021-02-02 23:35:29,789 INFO (MBeanExporter.java:433)- Registering beans for JMX exposure on startup
+2021-02-02 23:35:29,790 INFO (MBeanExporter.java:895)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-02-02 23:35:29,794 INFO (MBeanExporter.java:668)- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-02-02 23:35:29,804 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2021-02-02 23:35:29,812 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2021-02-02 23:35:29,823 INFO (TomcatWebServer.java:206)- Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-02 23:35:29,826 INFO (StartupInfoLogger.java:59)- Started Main in 3.363 seconds (JVM running for 4.049)
+2021-02-02 23:36:03,603 INFO (DirectJDKLog.java:180)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-02-02 23:36:03,603 INFO (FrameworkServlet.java:497)- FrameworkServlet 'dispatcherServlet': initialization started
+2021-02-02 23:36:03,619 INFO (FrameworkServlet.java:512)- FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2021-02-02 23:36:12,035 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2021-02-02 23:36:12,342 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2021-02-02 23:36:12,625 INFO (controller.java:74)- 测试log
+2021-02-02 23:50:14,340 INFO (StartupInfoLogger.java:50)- Starting Main on BF-202101082230 with PID 13864 (E:\learn_day\learn.springboot_01\target\classes started by Administrator in E:\learn_day\learn.springboot_01)
+2021-02-02 23:50:14,342 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2021-02-02 23:50:14,414 INFO (AbstractApplicationContext.java:592)- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5293276f: startup date [Tue Feb 02 23:50:14 CST 2021]; root of context hierarchy
+2021-02-02 23:50:16,072 INFO (TomcatWebServer.java:91)- Tomcat initialized with port(s): 8080 (http)
+2021-02-02 23:50:16,082 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2021-02-02 23:50:16,093 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2021-02-02 23:50:16,093 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.39
+2021-02-02 23:50:16,096 INFO (DirectJDKLog.java:180)- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java se\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\java se\bin;D:\Git\bin;E:\apache-tomcat-7.0.105\bin;E:\node\;E:\python\Scripts\;E:\python\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;.]
+2021-02-02 23:50:16,167 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2021-02-02 23:50:16,167 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 1753 ms
+2021-02-02 23:50:16,265 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-02-02 23:50:16,265 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-02-02 23:50:16,265 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-02-02 23:50:16,265 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'requestContextFilter' to: [/*]
+2021-02-02 23:50:16,266 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-02-02 23:50:16,266 INFO (ServletRegistrationBean.java:187)- Servlet dispatcherServlet mapped to [/]
+2021-02-02 23:50:16,990 INFO (DefaultSecurityFilterChain.java:43)- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@741c11d7, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f0e2831, org.springframework.security.web.header.HeaderWriterFilter@51b8ccb, org.springframework.security.web.csrf.CsrfFilter@3f60df76, org.springframework.security.web.authentication.logout.LogoutFilter@39b92ce8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4b3cff7c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@474cfa4c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@713868e3, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@7681348, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43637d23, org.springframework.security.web.session.SessionManagementFilter@4e7fe22b, org.springframework.security.web.access.ExceptionTranslationFilter@4f62e6dd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7e7cf945]
+2021-02-02 23:50:17,073 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-02 23:50:17,259 INFO (RequestMappingHandlerAdapter.java:589)- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5293276f: startup date [Tue Feb 02 23:50:14 CST 2021]; root of context hierarchy
+2021-02-02 23:50:17,313 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/index]}" onto public java.lang.String com.learn.controller.mycontroller.index()
+2021-02-02 23:50:17,315 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.update(int,org.springframework.ui.Model)
+2021-02-02 23:50:17,316 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.update(com.learn.pojo.User)
+2021-02-02 23:50:17,316 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/delete/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.delete(int)
+2021-02-02 23:50:17,316 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.addUser(org.springframework.ui.Model)
+2021-02-02 23:50:17,316 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload2],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload2(java.lang.String) throws java.io.IOException,org.apache.batik.transcoder.TranscoderException
+2021-02-02 23:50:17,317 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.addUsers(com.learn.pojo.User)
+2021-02-02 23:50:17,317 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getAllUser]}" onto public java.lang.String com.learn.controller.mycontroller.getAllUser(org.springframework.ui.Model)
+2021-02-02 23:50:17,317 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2021-02-02 23:50:17,318 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getPiugin]}" onto public java.lang.String com.learn.controller.mycontroller.getPiugin()
+2021-02-02 23:50:17,318 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.login(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2021-02-02 23:50:17,320 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-02-02 23:50:17,321 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-02-02 23:50:17,340 INFO (AbstractUrlHandlerMapping.java:359)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-02-02 23:50:17,341 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/toLogin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-02-02 23:50:17,358 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-02 23:50:17,358 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-02-02 23:50:17,458 WARN (ThymeleafAutoConfiguration.java:337)- Auto-configuration for thymeleaf-extras-springsecurity4 is deprecated in favour of thymeleaf-extras-springsecurity5
+2021-02-02 23:50:17,786 INFO (OptionalLiveReloadServer.java:57)- LiveReload server is running on port 35729
+2021-02-02 23:50:17,833 INFO (MBeanExporter.java:433)- Registering beans for JMX exposure on startup
+2021-02-02 23:50:17,834 INFO (MBeanExporter.java:895)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-02-02 23:50:17,840 INFO (MBeanExporter.java:668)- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-02-02 23:50:17,853 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2021-02-02 23:50:17,860 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2021-02-02 23:50:17,876 INFO (TomcatWebServer.java:206)- Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-02 23:50:17,880 INFO (StartupInfoLogger.java:59)- Started Main in 3.992 seconds (JVM running for 4.738)
+2021-02-02 23:50:22,349 INFO (DirectJDKLog.java:180)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-02-02 23:50:22,349 INFO (FrameworkServlet.java:497)- FrameworkServlet 'dispatcherServlet': initialization started
+2021-02-02 23:50:22,368 INFO (FrameworkServlet.java:512)- FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2021-02-02 23:50:30,298 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2021-02-02 23:50:30,647 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2021-02-02 23:50:30,926 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/getAllUser
+2021-02-02 23:50:30,927 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-02-02 23:50:30,927 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-02-02 23:50:30,955 INFO (controller.java:75)- 测试log
+2021-02-02 23:50:30,955 INFO (WebLogAspect.java:46)- RESPONSE : pages/user
+2021-02-02 23:50:35,847 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/getAllUser
+2021-02-02 23:50:35,847 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-02-02 23:50:35,847 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-02-02 23:50:35,896 INFO (controller.java:75)- 测试log
+2021-02-02 23:50:35,896 INFO (WebLogAspect.java:46)- RESPONSE : pages/user
+2021-02-02 23:50:36,811 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/getAllUser
+2021-02-02 23:50:36,811 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-02-02 23:50:36,812 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-02-02 23:50:36,859 INFO (controller.java:75)- 测试log
+2021-02-02 23:50:36,859 INFO (WebLogAspect.java:46)- RESPONSE : pages/user
+2021-02-02 23:51:11,570 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/index
+2021-02-02 23:51:11,572 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-02-02 23:51:11,572 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-02-02 23:51:11,573 INFO (WebLogAspect.java:46)- RESPONSE : redirect:/main
+2021-02-02 23:51:13,996 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/index
+2021-02-02 23:51:13,997 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-02-02 23:51:13,997 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-02-02 23:51:13,997 INFO (WebLogAspect.java:46)- RESPONSE : redirect:/main
+2021-03-15 11:27:43,873 INFO (StartupInfoLogger.java:50)- Starting Main on Jolin-PC with PID 7988 (D:\javaProject\learn.springboot_01\target\classes started by Jolin in D:\javaProject\learn.springboot_01)
+2021-03-15 11:27:43,874 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2021-03-15 11:27:43,940 INFO (AbstractApplicationContext.java:592)- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c03d51c: startup date [Mon Mar 15 11:27:43 CST 2021]; root of context hierarchy
+2021-03-15 11:27:45,782 INFO (TomcatWebServer.java:91)- Tomcat initialized with port(s): 8080 (http)
+2021-03-15 11:27:45,796 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-15 11:27:45,808 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2021-03-15 11:27:45,808 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.39
+2021-03-15 11:27:45,811 INFO (DirectJDKLog.java:180)- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java se\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;D:\mysql-8.0.22-winx64\mysql-8.0.22-winx64\bin;D:\java\bin;D:\putty\;D:\node-v12.16.2-win-x64;.]
+2021-03-15 11:27:45,921 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2021-03-15 11:27:45,921 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 1981 ms
+2021-03-15 11:27:45,988 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-15 11:27:45,989 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-15 11:27:45,989 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-15 11:27:45,989 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-15 11:27:45,990 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-03-15 11:27:45,990 INFO (ServletRegistrationBean.java:187)- Servlet dispatcherServlet mapped to [/]
+2021-03-15 11:27:46,776 INFO (DefaultSecurityFilterChain.java:43)- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10061b0d, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c4bf70d, org.springframework.security.web.header.HeaderWriterFilter@2b26bd24, org.springframework.security.web.csrf.CsrfFilter@4f5db55d, org.springframework.security.web.authentication.logout.LogoutFilter@25a4d788, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@27327893, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d92e3cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2427a39a, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@16e42831, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1db9c504, org.springframework.security.web.session.SessionManagementFilter@43299bc4, org.springframework.security.web.access.ExceptionTranslationFilter@2915caeb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a26b5bd]
+2021-03-15 11:27:46,852 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 11:27:47,075 INFO (RequestMappingHandlerAdapter.java:589)- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c03d51c: startup date [Mon Mar 15 11:27:43 CST 2021]; root of context hierarchy
+2021-03-15 11:27:47,154 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/index]}" onto public java.lang.String com.learn.controller.mycontroller.index()
+2021-03-15 11:27:47,156 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.update(int,org.springframework.ui.Model)
+2021-03-15 11:27:47,156 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.update(com.learn.pojo.User)
+2021-03-15 11:27:47,157 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/delete/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.delete(int)
+2021-03-15 11:27:47,157 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.addUser(org.springframework.ui.Model)
+2021-03-15 11:27:47,157 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getPiugin]}" onto public java.lang.String com.learn.controller.mycontroller.getPiugin()
+2021-03-15 11:27:47,157 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getAllUser]}" onto public java.lang.String com.learn.controller.mycontroller.getAllUser(org.springframework.ui.Model)
+2021-03-15 11:27:47,158 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.addUsers(com.learn.pojo.User)
+2021-03-15 11:27:47,158 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.login(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2021-03-15 11:27:47,158 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2021-03-15 11:27:47,158 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload2],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload2(java.lang.String) throws java.io.IOException,org.apache.batik.transcoder.TranscoderException
+2021-03-15 11:27:47,161 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-15 11:27:47,162 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-15 11:27:47,183 INFO (AbstractUrlHandlerMapping.java:359)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 11:27:47,183 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/toLogin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 11:27:47,208 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 11:27:47,208 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 11:27:47,307 WARN (ThymeleafAutoConfiguration.java:337)- Auto-configuration for thymeleaf-extras-springsecurity4 is deprecated in favour of thymeleaf-extras-springsecurity5
+2021-03-15 11:27:47,664 INFO (OptionalLiveReloadServer.java:57)- LiveReload server is running on port 35729
+2021-03-15 11:27:47,687 INFO (MBeanExporter.java:433)- Registering beans for JMX exposure on startup
+2021-03-15 11:27:47,689 INFO (MBeanExporter.java:895)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-15 11:27:47,692 INFO (MBeanExporter.java:668)- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-03-15 11:27:47,703 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2021-03-15 11:27:47,710 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2021-03-15 11:27:47,726 INFO (TomcatWebServer.java:206)- Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-15 11:27:47,728 INFO (StartupInfoLogger.java:59)- Started Main in 4.674 seconds (JVM running for 6.033)
+2021-03-15 11:27:58,409 INFO (DirectJDKLog.java:180)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-15 11:27:58,409 INFO (FrameworkServlet.java:497)- FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-15 11:27:58,442 INFO (FrameworkServlet.java:512)- FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2021-03-15 11:28:11,158 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2021-03-15 11:28:13,695 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2021-03-15 11:28:36,607 ERROR (AbstractAuthenticationProcessingFilter.java:221)- An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.learn.service.MyUserDetailsService.loadUserByUsername(MyUserDetailsService.java:24)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 57 common frames omitted
+2021-03-15 11:28:52,066 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/index
+2021-03-15 11:28:52,066 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 11:28:52,066 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 11:28:52,070 INFO (WebLogAspect.java:46)- RESPONSE : redirect:/main
+2021-03-15 11:28:56,123 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/index
+2021-03-15 11:28:56,123 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 11:28:56,124 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 11:28:56,125 INFO (WebLogAspect.java:46)- RESPONSE : redirect:/main
+2021-03-15 11:29:02,246 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/getAllUser
+2021-03-15 11:29:02,247 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 11:29:02,248 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 11:29:02,295 INFO (controller.java:75)- 测试log
+2021-03-15 11:29:02,296 INFO (WebLogAspect.java:46)- RESPONSE : pages/user
+2021-03-15 11:29:05,341 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/getAllUser
+2021-03-15 11:29:05,342 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 11:29:05,343 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 11:29:05,388 INFO (controller.java:75)- 测试log
+2021-03-15 11:29:05,388 INFO (WebLogAspect.java:46)- RESPONSE : pages/user
+2021-03-15 11:29:07,709 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/getAllUser
+2021-03-15 11:29:07,711 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 11:29:07,712 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 11:29:07,756 INFO (controller.java:75)- 测试log
+2021-03-15 11:29:07,756 INFO (WebLogAspect.java:46)- RESPONSE : pages/user
+2021-03-15 11:29:19,313 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/getAllUser
+2021-03-15 11:29:19,314 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 11:29:19,315 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 11:29:19,359 INFO (controller.java:75)- 测试log
+2021-03-15 11:29:19,360 INFO (WebLogAspect.java:46)- RESPONSE : pages/user
+2021-03-15 13:14:16,829 INFO (AbstractApplicationContext.java:1006)- Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c03d51c: startup date [Mon Mar 15 11:27:43 CST 2021]; root of context hierarchy
+2021-03-15 13:14:16,832 INFO (MBeanExporter.java:451)- Unregistering JMX-exposed beans on shutdown
+2021-03-15 13:14:16,832 INFO (MBeanRegistrationSupport.java:185)- Unregistering JMX-exposed beans
+2021-03-15 13:14:16,833 INFO (HikariDataSource.java:381)- HikariPool-1 - Shutdown initiated...
+2021-03-15 13:14:16,836 INFO (HikariDataSource.java:383)- HikariPool-1 - Shutdown completed.
+2021-03-15 13:14:17,277 INFO (StartupInfoLogger.java:50)- Starting Main on Jolin-PC with PID 7988 (D:\javaProject\learn.springboot_01\target\classes started by Jolin in D:\javaProject\learn.springboot_01)
+2021-03-15 13:14:17,278 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2021-03-15 13:14:17,281 INFO (AbstractApplicationContext.java:592)- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@61e5bc34: startup date [Mon Mar 15 13:14:17 CST 2021]; root of context hierarchy
+2021-03-15 13:14:17,690 INFO (TomcatWebServer.java:91)- Tomcat initialized with port(s): 8080 (http)
+2021-03-15 13:14:17,691 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-15 13:14:17,691 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2021-03-15 13:14:17,692 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.39
+2021-03-15 13:14:17,710 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2021-03-15 13:14:17,710 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 429 ms
+2021-03-15 13:14:17,738 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-15 13:14:17,738 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-15 13:14:17,738 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-15 13:14:17,738 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-15 13:14:17,738 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-03-15 13:14:17,738 INFO (ServletRegistrationBean.java:187)- Servlet dispatcherServlet mapped to [/]
+2021-03-15 13:14:17,830 INFO (UserDetailsServiceAutoConfiguration.java:87)- 
+
+Using generated security password: 942358b6-4cdc-497e-872e-8cec40a216df
+
+2021-03-15 13:14:17,878 INFO (DefaultSecurityFilterChain.java:43)- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f182c08, org.springframework.security.web.context.SecurityContextPersistenceFilter@42577240, org.springframework.security.web.header.HeaderWriterFilter@609ba9da, org.springframework.security.web.csrf.CsrfFilter@33c95cdf, org.springframework.security.web.authentication.logout.LogoutFilter@f6e2528, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3b444260, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c15bdb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b29f7a0, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@33b15982, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b185ff1, org.springframework.security.web.session.SessionManagementFilter@3b81fe4b, org.springframework.security.web.access.ExceptionTranslationFilter@3bcff3b2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65902e94]
+2021-03-15 13:14:17,924 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 13:14:18,010 INFO (RequestMappingHandlerAdapter.java:589)- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@61e5bc34: startup date [Mon Mar 15 13:14:17 CST 2021]; root of context hierarchy
+2021-03-15 13:14:18,026 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-15 13:14:18,026 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-15 13:14:18,041 INFO (AbstractUrlHandlerMapping.java:359)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 13:14:18,041 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/toLogin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 13:14:18,048 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 13:14:18,048 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 13:14:18,084 WARN (ThymeleafAutoConfiguration.java:337)- Auto-configuration for thymeleaf-extras-springsecurity4 is deprecated in favour of thymeleaf-extras-springsecurity5
+2021-03-15 13:14:18,331 INFO (OptionalLiveReloadServer.java:57)- LiveReload server is running on port 35729
+2021-03-15 13:14:18,350 INFO (MBeanExporter.java:433)- Registering beans for JMX exposure on startup
+2021-03-15 13:14:18,350 INFO (MBeanExporter.java:895)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-15 13:14:18,353 INFO (MBeanExporter.java:668)- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-03-15 13:14:18,365 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2021-03-15 13:14:18,366 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2021-03-15 13:14:18,387 INFO (TomcatWebServer.java:206)- Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-15 13:14:18,388 INFO (StartupInfoLogger.java:59)- Started Main in 1.153 seconds (JVM running for 6396.394)
+2021-03-15 13:14:18,392 INFO (ConditionEvaluationDeltaLoggingListener.java:50)- Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager'; @ConditionalOnMissingClass did not find unwanted class (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration#inMemoryUserDetailsManager matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.oauth2.client.registration.ClientRegistrationRepository; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2021-03-15 13:14:19,735 INFO (AbstractApplicationContext.java:1006)- Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@61e5bc34: startup date [Mon Mar 15 13:14:17 CST 2021]; root of context hierarchy
+2021-03-15 13:14:19,736 INFO (MBeanExporter.java:451)- Unregistering JMX-exposed beans on shutdown
+2021-03-15 13:14:19,737 INFO (MBeanRegistrationSupport.java:185)- Unregistering JMX-exposed beans
+2021-03-15 13:14:19,956 INFO (StartupInfoLogger.java:50)- Starting Main on Jolin-PC with PID 7988 (D:\javaProject\learn.springboot_01\target\classes started by Jolin in D:\javaProject\learn.springboot_01)
+2021-03-15 13:14:19,957 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2021-03-15 13:14:19,959 INFO (AbstractApplicationContext.java:592)- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3bdb73f2: startup date [Mon Mar 15 13:14:19 CST 2021]; root of context hierarchy
+2021-03-15 13:14:20,262 INFO (TomcatWebServer.java:91)- Tomcat initialized with port(s): 8080 (http)
+2021-03-15 13:14:20,263 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-15 13:14:20,264 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2021-03-15 13:14:20,264 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.39
+2021-03-15 13:14:20,274 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2021-03-15 13:14:20,275 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 316 ms
+2021-03-15 13:14:20,293 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-15 13:14:20,294 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-15 13:14:20,294 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-15 13:14:20,294 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-15 13:14:20,294 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-03-15 13:14:20,294 INFO (ServletRegistrationBean.java:187)- Servlet dispatcherServlet mapped to [/]
+2021-03-15 13:14:20,428 INFO (DefaultSecurityFilterChain.java:43)- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ef4574d, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d14e51c, org.springframework.security.web.header.HeaderWriterFilter@3a96e4f5, org.springframework.security.web.csrf.CsrfFilter@6869a009, org.springframework.security.web.authentication.logout.LogoutFilter@5bab0897, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@75733d32, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4dab9ca0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@401768ac, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@1069f8c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c76f98d, org.springframework.security.web.session.SessionManagementFilter@58587ff6, org.springframework.security.web.access.ExceptionTranslationFilter@1684d177, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@532c2395]
+2021-03-15 13:14:20,450 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 13:14:20,527 INFO (RequestMappingHandlerAdapter.java:589)- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3bdb73f2: startup date [Mon Mar 15 13:14:19 CST 2021]; root of context hierarchy
+2021-03-15 13:14:20,537 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/index]}" onto public java.lang.String com.learn.controller.mycontroller.index()
+2021-03-15 13:14:20,537 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.update(int,org.springframework.ui.Model)
+2021-03-15 13:14:20,538 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.update(com.learn.pojo.User)
+2021-03-15 13:14:20,538 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/delete/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.delete(int)
+2021-03-15 13:14:20,538 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.addUser(org.springframework.ui.Model)
+2021-03-15 13:14:20,538 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getPiugin]}" onto public java.lang.String com.learn.controller.mycontroller.getPiugin()
+2021-03-15 13:14:20,538 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getAllUser]}" onto public java.lang.String com.learn.controller.mycontroller.getAllUser(org.springframework.ui.Model)
+2021-03-15 13:14:20,538 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.addUsers(com.learn.pojo.User)
+2021-03-15 13:14:20,539 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.login(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2021-03-15 13:14:20,539 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2021-03-15 13:14:20,539 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload2],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload2(java.lang.String) throws java.io.IOException,org.apache.batik.transcoder.TranscoderException
+2021-03-15 13:14:20,541 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-15 13:14:20,541 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-15 13:14:20,552 INFO (AbstractUrlHandlerMapping.java:359)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 13:14:20,552 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/toLogin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 13:14:20,555 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 13:14:20,555 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 13:14:20,578 WARN (ThymeleafAutoConfiguration.java:337)- Auto-configuration for thymeleaf-extras-springsecurity4 is deprecated in favour of thymeleaf-extras-springsecurity5
+2021-03-15 13:14:20,667 INFO (OptionalLiveReloadServer.java:57)- LiveReload server is running on port 35729
+2021-03-15 13:14:20,681 INFO (MBeanExporter.java:433)- Registering beans for JMX exposure on startup
+2021-03-15 13:14:20,682 INFO (MBeanExporter.java:895)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-15 13:14:20,684 INFO (MBeanExporter.java:668)- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-03-15 13:14:20,688 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2021-03-15 13:14:20,689 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2021-03-15 13:14:20,692 INFO (TomcatWebServer.java:206)- Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-15 13:14:20,693 INFO (StartupInfoLogger.java:59)- Started Main in 0.763 seconds (JVM running for 6398.699)
+2021-03-15 13:14:20,695 INFO (ConditionEvaluationDeltaLoggingListener.java:50)- Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService; SearchStrategy: all) found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsService (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager'; @ConditionalOnMissingClass did not find unwanted class (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2021-03-15 13:14:24,805 INFO (DirectJDKLog.java:180)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-15 13:14:24,806 INFO (FrameworkServlet.java:497)- FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-15 13:14:24,815 INFO (FrameworkServlet.java:512)- FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms
+2021-03-15 13:22:51,963 INFO (HikariDataSource.java:110)- HikariPool-2 - Starting...
+2021-03-15 13:22:52,133 INFO (HikariDataSource.java:123)- HikariPool-2 - Start completed.
+2021-03-15 13:22:52,161 ERROR (AbstractAuthenticationProcessingFilter.java:221)- An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.learn.service.MyUserDetailsService.loadUserByUsername(MyUserDetailsService.java:24)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 57 common frames omitted
+2021-03-15 13:23:53,668 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/index
+2021-03-15 13:23:53,668 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 13:23:53,669 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 13:23:53,672 INFO (WebLogAspect.java:46)- RESPONSE : redirect:/main
+2021-03-15 13:23:59,132 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/index
+2021-03-15 13:23:59,133 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 13:23:59,134 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 13:23:59,134 INFO (WebLogAspect.java:46)- RESPONSE : redirect:/main
+2021-03-15 13:24:00,147 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/index
+2021-03-15 13:24:00,147 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 13:24:00,148 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 13:24:00,148 INFO (WebLogAspect.java:46)- RESPONSE : redirect:/main
+2021-03-15 13:24:12,731 INFO (StartupInfoLogger.java:50)- Starting Main on Jolin-PC with PID 10904 (D:\javaProject\learn.springboot_01\target\classes started by Jolin in D:\javaProject\learn.springboot_01)
+2021-03-15 13:24:12,736 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2021-03-15 13:24:12,796 INFO (AbstractApplicationContext.java:592)- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@23c20747: startup date [Mon Mar 15 13:24:12 CST 2021]; root of context hierarchy
+2021-03-15 13:24:14,286 INFO (TomcatWebServer.java:91)- Tomcat initialized with port(s): 8080 (http)
+2021-03-15 13:24:14,297 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-15 13:24:14,308 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2021-03-15 13:24:14,308 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.39
+2021-03-15 13:24:14,311 INFO (DirectJDKLog.java:180)- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java se\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;D:\mysql-8.0.22-winx64\mysql-8.0.22-winx64\bin;D:\java\bin;D:\putty\;D:\node-v12.16.2-win-x64;.]
+2021-03-15 13:24:14,404 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2021-03-15 13:24:14,404 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 1608 ms
+2021-03-15 13:24:14,468 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-15 13:24:14,469 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-15 13:24:14,469 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-15 13:24:14,469 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-15 13:24:14,470 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-03-15 13:24:14,470 INFO (ServletRegistrationBean.java:187)- Servlet dispatcherServlet mapped to [/]
+2021-03-15 13:24:15,109 INFO (DefaultSecurityFilterChain.java:43)- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f1b33bf, org.springframework.security.web.context.SecurityContextPersistenceFilter@5889d8ab, org.springframework.security.web.header.HeaderWriterFilter@49887856, org.springframework.security.web.csrf.CsrfFilter@15a10a8b, org.springframework.security.web.authentication.logout.LogoutFilter@471e4a11, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@520dd85c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a4bb6cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c7504d7, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@34e2960e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a08a0a9, org.springframework.security.web.session.SessionManagementFilter@9778e51, org.springframework.security.web.access.ExceptionTranslationFilter@12235533, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4aecabe7]
+2021-03-15 13:24:15,179 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 13:24:15,342 INFO (RequestMappingHandlerAdapter.java:589)- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@23c20747: startup date [Mon Mar 15 13:24:12 CST 2021]; root of context hierarchy
+2021-03-15 13:24:15,382 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/index]}" onto public java.lang.String com.learn.controller.mycontroller.index()
+2021-03-15 13:24:15,384 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.update(int,org.springframework.ui.Model)
+2021-03-15 13:24:15,384 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.update(com.learn.pojo.User)
+2021-03-15 13:24:15,384 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/delete/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.delete(int)
+2021-03-15 13:24:15,385 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.addUser(org.springframework.ui.Model)
+2021-03-15 13:24:15,385 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getPiugin]}" onto public java.lang.String com.learn.controller.mycontroller.getPiugin()
+2021-03-15 13:24:15,385 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getAllUser]}" onto public java.lang.String com.learn.controller.mycontroller.getAllUser(org.springframework.ui.Model)
+2021-03-15 13:24:15,385 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.addUsers(com.learn.pojo.User)
+2021-03-15 13:24:15,386 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.login(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2021-03-15 13:24:15,386 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2021-03-15 13:24:15,386 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload2],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload2(java.lang.String) throws java.io.IOException,org.apache.batik.transcoder.TranscoderException
+2021-03-15 13:24:15,388 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-15 13:24:15,388 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-15 13:24:15,404 INFO (AbstractUrlHandlerMapping.java:359)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 13:24:15,404 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/toLogin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 13:24:15,414 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 13:24:15,414 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 13:24:15,477 WARN (ThymeleafAutoConfiguration.java:337)- Auto-configuration for thymeleaf-extras-springsecurity4 is deprecated in favour of thymeleaf-extras-springsecurity5
+2021-03-15 13:24:15,716 INFO (OptionalLiveReloadServer.java:57)- LiveReload server is running on port 35729
+2021-03-15 13:24:15,738 INFO (MBeanExporter.java:433)- Registering beans for JMX exposure on startup
+2021-03-15 13:24:15,739 INFO (MBeanExporter.java:895)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-15 13:24:15,743 INFO (MBeanExporter.java:668)- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-03-15 13:24:15,753 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2021-03-15 13:24:15,761 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2021-03-15 13:24:15,775 INFO (TomcatWebServer.java:206)- Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-15 13:24:15,778 INFO (StartupInfoLogger.java:59)- Started Main in 3.612 seconds (JVM running for 4.346)
+2021-03-15 13:24:20,924 INFO (DirectJDKLog.java:180)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-15 13:24:20,924 INFO (FrameworkServlet.java:497)- FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-15 13:24:20,948 INFO (FrameworkServlet.java:512)- FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2021-03-15 13:24:39,682 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2021-03-15 13:24:40,071 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2021-03-15 13:24:40,122 ERROR (AbstractAuthenticationProcessingFilter.java:221)- An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.learn.service.MyUserDetailsService.loadUserByUsername(MyUserDetailsService.java:24)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 57 common frames omitted
+2021-03-15 13:24:48,202 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/index
+2021-03-15 13:24:48,203 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 13:24:48,203 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 13:24:48,206 INFO (WebLogAspect.java:46)- RESPONSE : redirect:/main
+2021-03-15 13:25:41,706 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/getAllUser
+2021-03-15 13:25:41,707 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 13:25:41,708 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 13:25:41,755 INFO (controller.java:77)- 测试log
+2021-03-15 13:25:41,757 INFO (WebLogAspect.java:46)- RESPONSE : pages/user
+2021-03-15 13:25:47,359 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/getAllUser
+2021-03-15 13:25:47,360 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 13:25:47,360 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 13:25:47,405 INFO (controller.java:77)- 测试log
+2021-03-15 13:25:47,406 INFO (WebLogAspect.java:46)- RESPONSE : pages/user
+2021-03-15 14:37:54,134 ERROR (AbstractAuthenticationProcessingFilter.java:221)- An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.learn.service.MyUserDetailsService.loadUserByUsername(MyUserDetailsService.java:24)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 57 common frames omitted
+2021-03-15 14:38:28,469 ERROR (AbstractAuthenticationProcessingFilter.java:221)- An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.learn.service.MyUserDetailsService.loadUserByUsername(MyUserDetailsService.java:24)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 57 common frames omitted
+2021-03-15 14:40:57,069 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/getAllUser
+2021-03-15 14:40:57,069 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 14:40:57,070 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 14:40:57,092 INFO (controller.java:77)- 测试log
+2021-03-15 14:40:57,093 INFO (WebLogAspect.java:46)- RESPONSE : pages/user
+2021-03-15 14:41:29,250 INFO (StartupInfoLogger.java:50)- Starting Main on Jolin-PC with PID 6804 (D:\javaProject\learn.springboot_01\target\classes started by Jolin in D:\javaProject\learn.springboot_01)
+2021-03-15 14:41:29,252 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2021-03-15 14:41:29,283 INFO (AbstractApplicationContext.java:592)- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5293276f: startup date [Mon Mar 15 14:41:29 CST 2021]; root of context hierarchy
+2021-03-15 14:41:30,682 INFO (TomcatWebServer.java:91)- Tomcat initialized with port(s): 8080 (http)
+2021-03-15 14:41:30,711 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-15 14:41:30,723 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2021-03-15 14:41:30,723 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.39
+2021-03-15 14:41:30,726 INFO (DirectJDKLog.java:180)- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java se\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;D:\mysql-8.0.22-winx64\mysql-8.0.22-winx64\bin;D:\java\bin;D:\putty\;D:\node-v12.16.2-win-x64;.]
+2021-03-15 14:41:30,805 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2021-03-15 14:41:30,805 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 1522 ms
+2021-03-15 14:41:30,869 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-15 14:41:30,869 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-15 14:41:30,869 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-15 14:41:30,869 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-15 14:41:30,870 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-03-15 14:41:30,870 INFO (ServletRegistrationBean.java:187)- Servlet dispatcherServlet mapped to [/]
+2021-03-15 14:41:31,540 INFO (DefaultSecurityFilterChain.java:43)- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3329b6a9, org.springframework.security.web.context.SecurityContextPersistenceFilter@744220f0, org.springframework.security.web.header.HeaderWriterFilter@5d17cdba, org.springframework.security.web.csrf.CsrfFilter@2ab59376, org.springframework.security.web.authentication.logout.LogoutFilter@4ae4b3b3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@34118655, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e51f141, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20de6ac7, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@14abb52, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@741c11d7, org.springframework.security.web.session.SessionManagementFilter@47db8188, org.springframework.security.web.access.ExceptionTranslationFilter@3fd0dc73, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@16ec7e4c]
+2021-03-15 14:41:31,611 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 14:41:31,775 INFO (RequestMappingHandlerAdapter.java:589)- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5293276f: startup date [Mon Mar 15 14:41:29 CST 2021]; root of context hierarchy
+2021-03-15 14:41:31,817 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/index]}" onto public java.lang.String com.learn.controller.mycontroller.index()
+2021-03-15 14:41:31,819 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.update(int,org.springframework.ui.Model)
+2021-03-15 14:41:31,819 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.update(com.learn.pojo.User)
+2021-03-15 14:41:31,820 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/delete/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.delete(int)
+2021-03-15 14:41:31,820 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.addUser(org.springframework.ui.Model)
+2021-03-15 14:41:31,820 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getPiugin]}" onto public java.lang.String com.learn.controller.mycontroller.getPiugin()
+2021-03-15 14:41:31,820 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getAllUser]}" onto public java.lang.String com.learn.controller.mycontroller.getAllUser(org.springframework.ui.Model)
+2021-03-15 14:41:31,821 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.addUsers(com.learn.pojo.User)
+2021-03-15 14:41:31,821 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.login(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2021-03-15 14:41:31,821 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2021-03-15 14:41:31,821 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload2],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload2(java.lang.String) throws java.io.IOException,org.apache.batik.transcoder.TranscoderException
+2021-03-15 14:41:31,823 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-15 14:41:31,824 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-15 14:41:31,840 INFO (AbstractUrlHandlerMapping.java:359)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 14:41:31,840 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/toLogin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 14:41:31,850 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 14:41:31,850 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 14:41:31,913 WARN (ThymeleafAutoConfiguration.java:337)- Auto-configuration for thymeleaf-extras-springsecurity4 is deprecated in favour of thymeleaf-extras-springsecurity5
+2021-03-15 14:41:32,156 INFO (OptionalLiveReloadServer.java:57)- LiveReload server is running on port 35729
+2021-03-15 14:41:32,179 INFO (MBeanExporter.java:433)- Registering beans for JMX exposure on startup
+2021-03-15 14:41:32,180 INFO (MBeanExporter.java:895)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-15 14:41:32,184 INFO (MBeanExporter.java:668)- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-03-15 14:41:32,193 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2021-03-15 14:41:32,200 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2021-03-15 14:41:32,214 INFO (TomcatWebServer.java:206)- Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-15 14:41:32,217 INFO (StartupInfoLogger.java:59)- Started Main in 3.288 seconds (JVM running for 3.823)
+2021-03-15 14:41:35,071 INFO (DirectJDKLog.java:180)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-15 14:41:35,071 INFO (FrameworkServlet.java:497)- FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-15 14:41:35,088 INFO (FrameworkServlet.java:512)- FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2021-03-15 14:41:41,902 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2021-03-15 14:41:42,270 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2021-03-15 14:41:42,508 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 14:41:42,508 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 14:41:42,509 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 14:41:42,512 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 14:45:15,103 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 14:45:15,105 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 14:45:15,106 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 14:45:15,107 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 14:45:44,615 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 14:45:44,615 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 14:45:44,616 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 14:45:44,616 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:03:39,946 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:03:39,947 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:03:39,948 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:03:39,948 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:04:05,983 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:04:05,984 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:04:05,985 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:04:05,985 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:04:12,524 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:04:12,526 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:04:12,527 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:04:12,529 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:04:13,565 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:04:13,568 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:04:13,568 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:04:13,570 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:04:33,840 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:04:33,841 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:04:33,842 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:04:33,843 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:04:40,913 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:04:40,913 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:04:40,914 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:04:40,914 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:15:00,043 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:15:00,044 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:15:00,045 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:15:00,046 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:15:01,950 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:15:01,951 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:15:01,952 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:15:01,953 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:15:03,163 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:15:03,164 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:15:03,164 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:15:03,165 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:15:07,428 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:15:07,429 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:15:07,429 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:15:07,430 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:15:08,289 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:15:08,290 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:15:08,291 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:15:08,293 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:15:46,548 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:15:46,549 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:15:46,550 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:15:46,550 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:16:41,514 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:16:41,514 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:16:41,515 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:16:41,516 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:16:58,497 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:16:58,498 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:16:58,499 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:16:58,500 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:17:00,332 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:17:00,334 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:17:00,334 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:17:00,335 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:17:01,563 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:17:01,564 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:17:01,565 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:17:01,566 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:17:09,918 INFO (StartupInfoLogger.java:50)- Starting Main on Jolin-PC with PID 11492 (D:\javaProject\learn.springboot_01\target\classes started by Jolin in D:\javaProject\learn.springboot_01)
+2021-03-15 15:17:09,919 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2021-03-15 15:17:09,991 INFO (AbstractApplicationContext.java:592)- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49f31318: startup date [Mon Mar 15 15:17:09 CST 2021]; root of context hierarchy
+2021-03-15 15:17:11,126 INFO (TomcatWebServer.java:91)- Tomcat initialized with port(s): 8080 (http)
+2021-03-15 15:17:11,134 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-15 15:17:11,143 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2021-03-15 15:17:11,144 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.39
+2021-03-15 15:17:11,147 INFO (DirectJDKLog.java:180)- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java se\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;D:\mysql-8.0.22-winx64\mysql-8.0.22-winx64\bin;D:\java\bin;D:\putty\;D:\node-v12.16.2-win-x64;.]
+2021-03-15 15:17:11,212 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2021-03-15 15:17:11,212 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 1221 ms
+2021-03-15 15:17:11,279 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-15 15:17:11,280 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-15 15:17:11,280 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-15 15:17:11,280 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-15 15:17:11,280 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-03-15 15:17:11,281 INFO (ServletRegistrationBean.java:187)- Servlet dispatcherServlet mapped to [/]
+2021-03-15 15:17:11,881 INFO (DefaultSecurityFilterChain.java:43)- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44c4b67b, org.springframework.security.web.context.SecurityContextPersistenceFilter@a72929d, org.springframework.security.web.header.HeaderWriterFilter@29037b23, org.springframework.security.web.csrf.CsrfFilter@1f41f626, org.springframework.security.web.authentication.logout.LogoutFilter@10203b02, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@25f8e92f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54ed379, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a5484a3, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4097d09f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76b997b5, org.springframework.security.web.session.SessionManagementFilter@7689fb5c, org.springframework.security.web.access.ExceptionTranslationFilter@294e08a2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6da63fbc]
+2021-03-15 15:17:11,951 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 15:17:12,107 INFO (RequestMappingHandlerAdapter.java:589)- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49f31318: startup date [Mon Mar 15 15:17:09 CST 2021]; root of context hierarchy
+2021-03-15 15:17:12,148 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/index]}" onto public java.lang.String com.learn.controller.mycontroller.index()
+2021-03-15 15:17:12,150 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.update(int,org.springframework.ui.Model)
+2021-03-15 15:17:12,150 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.update(com.learn.pojo.User)
+2021-03-15 15:17:12,150 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/delete/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.delete(int)
+2021-03-15 15:17:12,151 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.addUser(org.springframework.ui.Model)
+2021-03-15 15:17:12,151 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getPiugin]}" onto public java.lang.String com.learn.controller.mycontroller.getPiugin()
+2021-03-15 15:17:12,151 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getAllUser]}" onto public java.lang.String com.learn.controller.mycontroller.getAllUser(org.springframework.ui.Model)
+2021-03-15 15:17:12,151 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.addUsers(com.learn.pojo.User)
+2021-03-15 15:17:12,152 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.login(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2021-03-15 15:17:12,152 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2021-03-15 15:17:12,152 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload2],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload2(java.lang.String) throws java.io.IOException,org.apache.batik.transcoder.TranscoderException
+2021-03-15 15:17:12,154 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-15 15:17:12,155 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-15 15:17:12,170 INFO (AbstractUrlHandlerMapping.java:359)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 15:17:12,170 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/toLogin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 15:17:12,180 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 15:17:12,181 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 15:17:12,243 WARN (ThymeleafAutoConfiguration.java:337)- Auto-configuration for thymeleaf-extras-springsecurity4 is deprecated in favour of thymeleaf-extras-springsecurity5
+2021-03-15 15:17:12,484 INFO (OptionalLiveReloadServer.java:57)- LiveReload server is running on port 35729
+2021-03-15 15:17:12,506 INFO (MBeanExporter.java:433)- Registering beans for JMX exposure on startup
+2021-03-15 15:17:12,507 INFO (MBeanExporter.java:895)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-15 15:17:12,510 INFO (MBeanExporter.java:668)- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-03-15 15:17:12,519 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2021-03-15 15:17:12,526 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2021-03-15 15:17:12,537 INFO (TomcatWebServer.java:206)- Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-15 15:17:12,540 INFO (StartupInfoLogger.java:59)- Started Main in 3.018 seconds (JVM running for 3.516)
+2021-03-15 15:17:18,339 INFO (DirectJDKLog.java:180)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-15 15:17:18,340 INFO (FrameworkServlet.java:497)- FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-15 15:17:18,355 INFO (FrameworkServlet.java:512)- FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2021-03-15 15:17:24,045 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2021-03-15 15:17:24,399 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2021-03-15 15:17:24,452 ERROR (AbstractAuthenticationProcessingFilter.java:221)- An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.learn.service.MyUserDetailsService.loadUserByUsername(MyUserDetailsService.java:24)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 57 common frames omitted
+2021-03-15 15:17:30,993 ERROR (AbstractAuthenticationProcessingFilter.java:221)- An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.learn.service.MyUserDetailsService.loadUserByUsername(MyUserDetailsService.java:24)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 57 common frames omitted
+2021-03-15 15:17:36,697 ERROR (AbstractAuthenticationProcessingFilter.java:221)- An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at com.learn.service.MyUserDetailsService.loadUserByUsername(MyUserDetailsService.java:24)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 57 common frames omitted
+2021-03-15 15:17:41,932 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:17:41,932 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:17:41,932 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:17:41,936 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:35:56,484 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:35:56,486 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:35:56,487 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:35:56,487 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:35:58,429 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:35:58,430 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:35:58,430 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:35:58,431 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:36:00,711 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:36:00,712 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:36:00,713 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:36:00,714 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:36:15,466 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:36:15,467 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:36:15,468 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:36:15,468 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:36:41,508 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:36:41,509 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:36:41,519 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:36:41,519 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:36:42,395 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:36:42,396 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:36:42,397 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:36:42,398 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:36:42,936 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:36:42,937 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:36:42,937 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:36:42,938 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:39:16,085 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:39:16,086 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:39:16,087 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:39:16,088 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:40:05,069 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:40:05,070 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:40:05,071 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:40:05,072 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:40:35,622 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:40:35,623 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:40:35,624 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:40:35,625 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:40:50,236 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:40:50,237 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:40:50,237 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:40:50,238 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:41:06,024 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:41:06,026 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:41:06,026 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:41:06,027 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:42:00,872 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:42:00,873 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:42:00,874 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:42:00,875 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:42:29,117 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:42:29,117 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:42:29,118 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:42:29,118 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:43:24,085 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:43:24,086 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:43:24,087 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:43:24,089 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:43:30,379 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:43:30,381 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:43:30,381 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:43:30,382 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:43:55,131 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:43:55,132 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:43:55,132 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:43:55,133 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:44:06,882 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:44:06,883 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:44:06,884 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:44:06,885 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:44:34,660 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:44:34,662 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:44:34,664 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:44:34,665 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:46:40,761 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:46:40,762 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:46:40,762 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:46:40,762 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:46:42,522 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:46:42,524 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:46:42,524 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:46:42,525 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:46:48,220 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:46:48,222 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:46:48,223 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:46:48,225 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:46:49,128 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:46:49,129 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:46:49,130 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:46:49,131 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:47:27,508 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:47:27,509 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:47:27,510 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:47:27,511 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:47:53,792 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:47:53,793 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:47:53,794 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:47:53,794 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:48:12,043 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:48:12,045 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:48:12,047 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:48:12,048 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:48:26,578 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:48:26,578 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:48:26,579 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:48:26,579 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:48:34,985 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:48:34,986 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:48:34,987 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:48:34,988 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:49:29,147 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:49:29,148 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:49:29,149 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:49:29,150 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:50:31,557 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:50:31,558 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:50:31,559 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:50:31,559 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:50:48,710 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:50:48,711 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:50:48,711 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:50:48,711 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:52:25,605 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:52:25,606 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:52:25,606 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:52:25,607 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:52:27,464 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:52:27,465 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:52:27,466 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:52:27,467 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:52:52,102 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:52:52,102 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:52:52,103 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:52:52,103 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:53:45,488 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:53:45,488 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:53:45,489 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:53:45,489 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:53:47,348 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:53:47,348 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:53:47,349 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:53:47,349 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:53:48,168 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:53:48,169 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:53:48,169 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:53:48,170 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:53:54,333 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:53:54,333 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:53:54,334 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:53:54,334 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:54:31,940 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:54:31,941 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:54:31,941 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:54:31,942 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:54:44,509 INFO (StartupInfoLogger.java:50)- Starting Main on Jolin-PC with PID 9484 (D:\javaProject\learn.springboot_01\target\classes started by Jolin in D:\javaProject\learn.springboot_01)
+2021-03-15 15:54:44,511 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2021-03-15 15:54:44,540 INFO (AbstractApplicationContext.java:592)- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@56474a36: startup date [Mon Mar 15 15:54:44 CST 2021]; root of context hierarchy
+2021-03-15 15:54:46,260 INFO (TomcatWebServer.java:91)- Tomcat initialized with port(s): 8080 (http)
+2021-03-15 15:54:46,269 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-15 15:54:46,291 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2021-03-15 15:54:46,292 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.39
+2021-03-15 15:54:46,296 INFO (DirectJDKLog.java:180)- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java se\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;D:\mysql-8.0.22-winx64\mysql-8.0.22-winx64\bin;D:\java\bin;D:\putty\;D:\node-v12.16.2-win-x64;.]
+2021-03-15 15:54:46,354 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2021-03-15 15:54:46,354 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 1814 ms
+2021-03-15 15:54:46,418 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-15 15:54:46,419 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-15 15:54:46,419 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-15 15:54:46,419 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-15 15:54:46,420 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-03-15 15:54:46,420 INFO (ServletRegistrationBean.java:187)- Servlet dispatcherServlet mapped to [/]
+2021-03-15 15:54:47,036 INFO (DefaultSecurityFilterChain.java:43)- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@445b8a35, org.springframework.security.web.context.SecurityContextPersistenceFilter@cb2ba6f, org.springframework.security.web.header.HeaderWriterFilter@6db7c916, org.springframework.security.web.csrf.CsrfFilter@4ce68661, org.springframework.security.web.authentication.logout.LogoutFilter@2fca82cd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@43637d23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20de6ac7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23e57814, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@757da209, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ac6520d, org.springframework.security.web.session.SessionManagementFilter@f18a59d, org.springframework.security.web.access.ExceptionTranslationFilter@5e51f141, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34118655]
+2021-03-15 15:54:47,129 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 15:54:47,304 INFO (RequestMappingHandlerAdapter.java:589)- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@56474a36: startup date [Mon Mar 15 15:54:44 CST 2021]; root of context hierarchy
+2021-03-15 15:54:47,353 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/index]}" onto public java.lang.String com.learn.controller.mycontroller.index()
+2021-03-15 15:54:47,355 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.update(int,org.springframework.ui.Model)
+2021-03-15 15:54:47,356 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.update(com.learn.pojo.User)
+2021-03-15 15:54:47,356 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/delete/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.delete(int)
+2021-03-15 15:54:47,357 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getPiugin]}" onto public java.lang.String com.learn.controller.mycontroller.getPiugin()
+2021-03-15 15:54:47,360 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getAllUser]}" onto public java.lang.String com.learn.controller.mycontroller.getAllUser(org.springframework.ui.Model)
+2021-03-15 15:54:47,360 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.addUsers(com.learn.pojo.User)
+2021-03-15 15:54:47,360 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.login(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2021-03-15 15:54:47,361 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2021-03-15 15:54:47,361 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload2],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload2(java.lang.String) throws java.io.IOException,org.apache.batik.transcoder.TranscoderException
+2021-03-15 15:54:47,361 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.addUser(org.springframework.ui.Model)
+2021-03-15 15:54:47,363 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-15 15:54:47,364 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-15 15:54:47,387 INFO (AbstractUrlHandlerMapping.java:359)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 15:54:47,387 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/toLogin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 15:54:47,399 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 15:54:47,400 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 15:54:47,473 WARN (ThymeleafAutoConfiguration.java:337)- Auto-configuration for thymeleaf-extras-springsecurity4 is deprecated in favour of thymeleaf-extras-springsecurity5
+2021-03-15 15:54:47,736 INFO (OptionalLiveReloadServer.java:57)- LiveReload server is running on port 35729
+2021-03-15 15:54:47,758 INFO (MBeanExporter.java:433)- Registering beans for JMX exposure on startup
+2021-03-15 15:54:47,759 INFO (MBeanExporter.java:895)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-15 15:54:47,763 INFO (MBeanExporter.java:668)- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-03-15 15:54:47,772 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2021-03-15 15:54:47,780 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2021-03-15 15:54:47,790 INFO (TomcatWebServer.java:206)- Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-15 15:54:47,793 INFO (StartupInfoLogger.java:59)- Started Main in 3.575 seconds (JVM running for 4.119)
+2021-03-15 15:54:51,233 INFO (DirectJDKLog.java:180)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-15 15:54:51,234 INFO (FrameworkServlet.java:497)- FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-15 15:54:51,249 INFO (FrameworkServlet.java:512)- FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2021-03-15 15:54:57,732 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2021-03-15 15:54:58,035 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2021-03-15 15:54:58,282 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:54:58,282 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:54:58,282 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:54:58,286 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 15:55:23,606 INFO (StartupInfoLogger.java:50)- Starting Main on Jolin-PC with PID 9132 (D:\javaProject\learn.springboot_01\target\classes started by Jolin in D:\javaProject\learn.springboot_01)
+2021-03-15 15:55:23,607 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2021-03-15 15:55:23,647 INFO (AbstractApplicationContext.java:592)- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49f31318: startup date [Mon Mar 15 15:55:23 CST 2021]; root of context hierarchy
+2021-03-15 15:55:24,976 INFO (TomcatWebServer.java:91)- Tomcat initialized with port(s): 8080 (http)
+2021-03-15 15:55:24,985 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-15 15:55:24,995 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2021-03-15 15:55:24,995 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.39
+2021-03-15 15:55:24,998 INFO (DirectJDKLog.java:180)- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java se\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;D:\mysql-8.0.22-winx64\mysql-8.0.22-winx64\bin;D:\java\bin;D:\putty\;D:\node-v12.16.2-win-x64;.]
+2021-03-15 15:55:25,055 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2021-03-15 15:55:25,056 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 1409 ms
+2021-03-15 15:55:25,126 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-15 15:55:25,127 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-15 15:55:25,127 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-15 15:55:25,127 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-15 15:55:25,128 INFO (AbstractFilterRegistrationBean.java:245)- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-03-15 15:55:25,128 INFO (ServletRegistrationBean.java:187)- Servlet dispatcherServlet mapped to [/]
+2021-03-15 15:55:25,768 INFO (DefaultSecurityFilterChain.java:43)- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34c7e86b, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f89fac3, org.springframework.security.web.header.HeaderWriterFilter@a72929d, org.springframework.security.web.csrf.CsrfFilter@35f1e1b5, org.springframework.security.web.authentication.logout.LogoutFilter@48388fb9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4097d09f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1efd403b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10f75aec, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@76b997b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eccad30, org.springframework.security.web.session.SessionManagementFilter@54ed379, org.springframework.security.web.access.ExceptionTranslationFilter@3020a31b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e5c7475]
+2021-03-15 15:55:25,842 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 15:55:26,008 INFO (RequestMappingHandlerAdapter.java:589)- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49f31318: startup date [Mon Mar 15 15:55:23 CST 2021]; root of context hierarchy
+2021-03-15 15:55:26,055 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/index]}" onto public java.lang.String com.learn.controller.mycontroller.index()
+2021-03-15 15:55:26,057 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.update(int,org.springframework.ui.Model)
+2021-03-15 15:55:26,058 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/updateUser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.update(com.learn.pojo.User)
+2021-03-15 15:55:26,058 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/delete/{id}],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.delete(int)
+2021-03-15 15:55:26,058 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[GET]}" onto public java.lang.String com.learn.controller.mycontroller.addUser(org.springframework.ui.Model)
+2021-03-15 15:55:26,059 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getPiugin]}" onto public java.lang.String com.learn.controller.mycontroller.getPiugin()
+2021-03-15 15:55:26,059 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/getAllUser]}" onto public java.lang.String com.learn.controller.mycontroller.getAllUser(org.springframework.ui.Model)
+2021-03-15 15:55:26,059 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/adduser],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.addUsers(com.learn.pojo.User)
+2021-03-15 15:55:26,059 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.login(java.lang.String,java.lang.String,org.springframework.ui.Model,javax.servlet.http.HttpSession)
+2021-03-15 15:55:26,059 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2021-03-15 15:55:26,059 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/upload2],methods=[POST]}" onto public java.lang.String com.learn.controller.mycontroller.upload2(java.lang.String) throws java.io.IOException,org.apache.batik.transcoder.TranscoderException
+2021-03-15 15:55:26,062 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-15 15:55:26,063 INFO (AbstractHandlerMethodMapping.java:550)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-15 15:55:26,079 INFO (AbstractUrlHandlerMapping.java:359)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 15:55:26,079 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/toLogin] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2021-03-15 15:55:26,090 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 15:55:26,090 INFO (AbstractUrlHandlerMapping.java:372)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-15 15:55:26,158 WARN (ThymeleafAutoConfiguration.java:337)- Auto-configuration for thymeleaf-extras-springsecurity4 is deprecated in favour of thymeleaf-extras-springsecurity5
+2021-03-15 15:55:26,419 INFO (OptionalLiveReloadServer.java:57)- LiveReload server is running on port 35729
+2021-03-15 15:55:26,442 INFO (MBeanExporter.java:433)- Registering beans for JMX exposure on startup
+2021-03-15 15:55:26,443 INFO (MBeanExporter.java:895)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-15 15:55:26,449 INFO (MBeanExporter.java:668)- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2021-03-15 15:55:26,468 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2021-03-15 15:55:26,475 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2021-03-15 15:55:26,488 INFO (TomcatWebServer.java:206)- Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-15 15:55:26,490 INFO (StartupInfoLogger.java:59)- Started Main in 3.224 seconds (JVM running for 3.788)
+2021-03-15 15:55:29,721 INFO (DirectJDKLog.java:180)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-15 15:55:29,721 INFO (FrameworkServlet.java:497)- FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-15 15:55:29,736 INFO (FrameworkServlet.java:512)- FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2021-03-15 15:55:35,063 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2021-03-15 15:55:35,363 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2021-03-15 15:55:35,609 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 15:55:35,609 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 15:55:35,610 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 15:55:35,615 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:02:52,207 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:02:52,208 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:02:52,209 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:02:52,210 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:03:14,237 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:03:14,238 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:03:14,239 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:03:14,240 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:03:18,554 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:03:18,556 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:03:18,557 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:03:18,558 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:03:42,711 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:03:42,711 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:03:42,712 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:03:42,712 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:03:44,155 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:03:44,157 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:03:44,157 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:03:44,158 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:04:05,841 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:04:05,842 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:04:05,843 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:04:05,844 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:06:09,723 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:06:09,724 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:06:09,725 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:06:09,726 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:06:13,908 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:06:13,909 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:06:13,910 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:06:13,911 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:06:15,936 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:06:15,937 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:06:15,938 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:06:15,939 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:06:22,689 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:06:22,691 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:06:22,691 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:06:22,692 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:07:02,415 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:07:02,417 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:07:02,417 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:07:02,417 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:07:28,430 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:07:28,430 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:07:28,431 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:07:28,431 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:07:41,123 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:07:41,124 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:07:41,125 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:07:41,125 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:10:16,960 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:10:16,961 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:10:16,962 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:10:16,963 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:10:37,067 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:10:37,067 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:10:37,068 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:10:37,069 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:11:13,226 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:11:13,227 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:11:13,228 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:11:13,229 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:18:06,733 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:18:06,735 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:18:06,737 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:18:06,737 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:18:09,885 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:18:09,887 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:18:09,888 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:18:09,888 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:18:37,788 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:18:37,788 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:18:37,789 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:18:37,789 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 16:26:43,657 INFO (WebLogAspect.java:33)- URL : http://localhost:8080/adduser
+2021-03-15 16:26:43,658 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-15 16:26:43,660 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-15 16:26:43,661 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-15 18:04:30,534 WARN (HikariPool.java:758)- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m24s550ms88µs810ns).

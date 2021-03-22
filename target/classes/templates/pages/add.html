@@ -11,6 +11,8 @@
     <link rel="stylesheet" th:href="@{../css/all.min.css}">
     <!-- Theme style -->
     <link rel="stylesheet" th:href="@{../css/adminlte.min.css}">
+    <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -58,6 +60,35 @@
                         <div class="form-group">
                             <label>年龄</label>
                             <input type="number" class="form-control" name="age" placeholder=18>
+                        </div>
+                        <div>
+                            <label>部门</label>
+                            <input id="dep" type="text" class="form-control" name="dep" ></input>
+                            <div class="modal fade show" id="modal-default" style="display: block; padding: 17px;"
+                                 aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">默认弹框</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div style="height: 300px;width: 500px;overflow: auto;padding: 10px;margin: 0px; white-space:nowrap;">
+                                            <div id="department" class="modal-body">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                            </button>
+                                            <button type="button" class="btn btn-primary">保存修改</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+
                         </div>
                         <div>
                             <label>学历</label>
@@ -108,8 +139,8 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <button id="re"        class="btn btn-success"  type="button" onclick="myclear()">清除</button>
-                            <button id="canvasBtn"  class="btn btn-primary" type="button" onclick="save()">完成</button>
+                            <button id="re" class="btn btn-success" type="button" onclick="myclear()">清除</button>
+                            <button id="canvasBtn" class="btn btn-primary" type="button" onclick="save()">完成</button>
 
                         </div>
                     </div>
@@ -136,14 +167,96 @@
 <script th:src="@{../js/adminlte.min.js}"></script>
 <script th:src="@{../js/jSignature.min.noconflict.js}"></script>
 <script th:src="@{../js/modernizr.js}"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
 <script>
+    //树形组件
+    $("#department").treeview(
+        {
+            backColor: "#FFFFFF",
+            color: "#428bca",
+            enableLinks: true,
+            data: getTree(),
+            onNodeSelected: function (event,data) {
+                alert(data.text);
+                $("#modal-default").attr("class","modal fade");
+                $("#modal-default").css("display","none");
+            }
+        }
+    );
+    $("#dep").onclick({
+        alert("====================");
+    });
+    //定义树里的数据来源
+    function getTree() {
+        var data = [
+            {
+                text: 'Parent 1',
+                href: '#parent1',
+                tags: ['4'],
+                selectable: false,
+                nodes: [
+                    {
+                        text: 'Child 1',
+                        href: '#child1',
+                        tags: ['2'],
+                        nodes: [
+                            {
+                                text: 'Grandchild 1',
+                                href: '#grandchild1',
+                                tags: ['0']
+                            },
+                            {
+                                text: 'Grandchild 2',
+                                href: '#grandchild2',
+                                tags: ['0']
+                            }
+                        ]
+                    },
+                    {
+                        text: 'Child 2',
+                        href: '#child2',
+                        tags: ['0']
+                    }
+                ]
+            },
+            {
+                text: 'Parent 2',
+                href: '#parent2',
+                tags: ['0']
+            },
+            {
+                text: 'Parent 3',
+                href: '#parent3',
+                tags: ['0']
+            },
+            {
+                text: 'Parent 4',
+                href: '#parent4',
+                tags: ['0']
+            },
+            {
+                text: 'Parent 5',
+                href: '#parent5',
+                tags: ['0']
+            }
+        ];
+        return data;
+    }
+
+
     $(function () {
         //画布初始化 transparent去除初始化的下划线
         //lineWidth 设置画笔粗细为2
-        $("#canvas").jSignature({width: '100%', height: 300, "decor-color": "transparent", lineWidth: '10' ,background:'#fff'});
+        $("#canvas").jSignature({
+            width: '100%',
+            height: 300,
+            "decor-color": "transparent",
+            lineWidth: '10',
+            background: '#fff'
+        });
     });
-    function myclear()
-    {
+
+    function myclear() {
         $("#canvas").jSignature("clear");
     }
 
@@ -155,23 +268,20 @@
 
         //使用ajax发送数据
         $.ajax({
-            url:"/upload2",
-            method:'post',
+            url: "/upload2",
+            method: 'post',
             data: f,
             contentType: false,
             processData: false,
-            success:function (r) {
+            success: function (r) {
                 //返回数据
-                console.log("测试返回数据！文件名是："+r);
+                console.log("测试返回数据！文件名是：" + r);
             },
             error: function (e) {
                 alert("服务器异常");
             }
         });
     }
-
-
-
 
 
 </script>
