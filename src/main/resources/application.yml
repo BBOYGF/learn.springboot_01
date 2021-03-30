@@ -17,3 +17,5 @@ myPath:
   path: D:/Desktop
 logging:
   config: classpath:log/logback.xml
+server:
+  port: 80
