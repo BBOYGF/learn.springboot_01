@@ -125,3 +125,11 @@ Caused by: java.lang.NullPointerException: null
 2021-03-31 13:32:39,760 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
 2021-03-31 13:32:39,762 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
 2021-03-31 13:32:39,764 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-31 13:55:37,667 INFO (WebLogAspect.java:33)- URL : http://localhost/adduser
+2021-03-31 13:55:37,669 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-31 13:55:37,670 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-31 13:55:37,670 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
+2021-03-31 13:55:38,452 INFO (WebLogAspect.java:33)- URL : http://localhost/adduser
+2021-03-31 13:55:38,453 INFO (WebLogAspect.java:34)- HTTP_METHOD : GET
+2021-03-31 13:55:38,454 INFO (WebLogAspect.java:35)- IP : 0:0:0:0:0:0:0:1
+2021-03-31 13:55:38,455 INFO (WebLogAspect.java:46)- RESPONSE : pages/add
