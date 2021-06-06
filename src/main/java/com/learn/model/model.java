@@ -51,9 +51,8 @@ public class model {
             connection.setUseCaches(false);
             connection.setRequestProperty("X-MBX-APIKEY", "99KbJ8zbzP3bWk5Coq3FYJzNUViUMJHqqfQbz631c12c7EqqqhfcnGot94MB8W44");
             System.out.println("====请求体是" + outputStr);
+            connection.setRequestProperty("type","GET");
             connection.connect();
-            connection.setRequestProperty("type","SPOT");
-            connection.setRequestProperty("timestamp",System.currentTimeMillis()+"");
 
             if (null != outputStr) {
                 OutputStream outputStream = connection.getOutputStream();

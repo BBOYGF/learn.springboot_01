@@ -181,6 +181,7 @@ class mycontroller {
         String str = parameters + "&signature=" + signature;
         System.out.println(str);
         String data = new model().getData("https://api.binance.com/api/v3/ping", "GET ", null);
+        //String data = new model().getData("https://www.baidu.com", "GET ", null);
         System.out.println(data);
         return data;
     }
