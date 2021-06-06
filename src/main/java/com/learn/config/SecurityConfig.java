@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/adduser","/index","/main").hasAnyRole("vip1")
-                .antMatchers("/getAllUser","/","/main").hasAnyRole("guofan");
+                .antMatchers("/getAllUser","/","/main","/getModel").hasAnyRole("guofan");
         System.out.println("授权了！");
         http.formLogin().loginPage("/toLogin").loginProcessingUrl("/login").usernameParameter("username").passwordParameter("password");
         http.rememberMe();
