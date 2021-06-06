@@ -173,7 +173,7 @@ class mycontroller {
     }
 
     @ResponseBody
-    @PostMapping("/getModel")
+    @GetMapping("/getModel")
     public String getData() {
         String parameters = "type=SPOT&recvWindow=5000&timestamp=" + System.currentTimeMillis();
         String secretkey = "NrNppXyOTbUQp5xk2nmCrKKwvkUIYwks9YF1ARSpUtiBrChkgUZCifCWG2s2X1yl";

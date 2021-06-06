@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Starter</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">-->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" th:href="@{../css/all.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{../css/adminlte.min.css}">
+    <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="wrapper">
+    <!-- 头部导航 -->
+    <div th:insert="~{pages/piugin :: headBar}"></div>
+    <!--左侧导航-->
+    <div th:insert="~{pages/piugin :: leftBar}"></div>
+    <!--添加表单-->
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Starter Page</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Starter Page</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div>
+        </div>
+        <div class="content">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">添加员工</h3>
+                </div>
+                <form th:action="@{/adduser}" method="post">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>姓名</label>
+                            <input type="text" class="form-control" name="name" placeholder="姓名">
+                        </div>
+                        <div class="form-group">
+                            <label>密码</label>
+                            <input type="text" class="form-control" name="Password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label>出生年月日</label>
+                            <input type="text" class="form-control" name="birthday" placeholder="2020-01-01">
+                        </div>
+                        <div class="form-group">
+                            <label>年龄</label>
+                            <input type="number" class="form-control" name="age" placeholder=18>
+                        </div>
+                        <div>
+                            <label>部门</label>
+                            <input id="dep" type="text" class="form-control" name="dep" ></input>
+                            <div class="modal fade show" id="modal-default" style="display: block; padding: 17px;"
+                                 aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">默认弹框</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div style="height: 300px;width: 500px;overflow: auto;padding: 10px;margin: 0px; white-space:nowrap;">
+                                            <div id="department" class="modal-body">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button"  class="btn btn-default" data-dismiss="modal" onclick="clossWindow()">关闭
+                                            </button>
+                                            <button type="button" class="btn btn-primary">保存修改</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+
+                        </div>
+                        <div>
+                            <label>学历</label>
+                            <select class="form-control" name="education">
+                                <option th:each="education:${educations}" th:text="${education.getName()}"
+                                        th:value="${education.id}"></option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">上传图片</h3>
+                </div>
+                <form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>文件上传</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="file">
+                                    <label class="custom-file-label" text="选择文件" placeholder="2020-01-01"></label>
+                                </div>
+                                <div class="input-group-append">
+                                    <button type="submit" class="input-group-text">上传</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">签字确认</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="canvas"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button id="re" class="btn btn-success" type="button" onclick="myclear()">清除</button>
+                            <button id="canvasBtn" class="btn btn-primary" type="button" onclick="save()">完成</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+    </div>
+</aside>
+</div>
+<script th:src="@{../js/jquery.min.js}"></script>
+<!-- Bootstrap 4 -->
+<script th:src="@{../js/bootstrap.bundle.min.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{../js/adminlte.min.js}"></script>
+<script th:src="@{../js/jSignature.min.noconflict.js}"></script>
+<script th:src="@{../js/modernizr.js}"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+<script>
+    //树形组件
+    $("#department").treeview(
+        {
+            backColor: "#FFFFFF",
+            color: "#428bca",
+            enableLinks: true,
+            data: getTree(),
+            onNodeSelected: function (event,data) {
+                alert(data.text);
+                $("#modal-default").attr("class","modal fade");
+                $("#modal-default").css("display","none");
+            }
+        }
+    );
+    function clossWindow()
+    {
+        alert("关闭窗口！");
+    }
+    $("#dep").onclick({
+        alert("====================");
+    });
+    //定义树里的数据来源
+    function getTree() {
+        var data = [
+            {
+                text: 'Parent 1',
+                href: '#parent1',
+                tags: ['4'],
+                selectable: false,
+                nodes: [
+                    {
+                        text: 'Child 1',
+                        href: '#child1',
+                        tags: ['2'],
+                        nodes: [
+                            {
+                                text: 'Grandchild 1',
+                                href: '#grandchild1',
+                                tags: ['0']
+                            },
+                            {
+                                text: 'Grandchild 2',
+                                href: '#grandchild2',
+                                tags: ['0']
+                            }
+                        ]
+                    },
+                    {
+                        text: 'Child 2',
+                        href: '#child2',
+                        tags: ['0']
+                    }
+                ]
+            },
+            {
+                text: 'Parent 2',
+                href: '#parent2',
+                tags: ['0']
+            },
+            {
+                text: 'Parent 3',
+                href: '#parent3',
+                tags: ['0']
+            },
+            {
+                text: 'Parent 4',
+                href: '#parent4',
+                tags: ['0']
+            },
+            {
+                text: 'Parent 5',
+                href: '#parent5',
+                tags: ['0']
+            }
+        ];
+        return data;
+    }
+
+
+    $(function () {
+        //画布初始化 transparent去除初始化的下划线
+        //lineWidth 设置画笔粗细为2
+        $("#canvas").jSignature({
+            width: '100%',
+            height: 300,
+            "decor-color": "transparent",
+            lineWidth: '10',
+            background: '#fff'
+        });
+    });
+
+    function myclear() {
+        $("#canvas").jSignature("clear");
+    }
+
+    function save() {
+        //将图片转换成base64位数据格式
+        var data = $("#canvas").jSignature("getData", "svgbase64");
+        var f = new FormData();//FormData对象用以将数据编译成键值对
+        f.append("fileStr", data[1]);//装换为键值对的对象
+
+        //使用ajax发送数据
+        $.ajax({
+            url: "/upload2",
+            method: 'post',
+            data: f,
+            contentType: false,
+            processData: false,
+            success: function (r) {
+                //返回数据
+                console.log("测试返回数据！文件名是：" + r);
+            },
+            error: function (e) {
+                alert("服务器异常");
+            }
+        });
+    }
+
+
+</script>
+</body>
+</html>
