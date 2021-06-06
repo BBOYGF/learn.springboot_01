@@ -1,9 +1,11 @@
 package com.learn.controller;
 import com.learn.bean.Education;
 import com.learn.mapper.UserMapper;
+import com.learn.model.model;
 import com.learn.pojo.User;
 import com.learn.service.myData;
 
+import com.learn.util.EncryptTool;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.batik.transcoder.TranscoderException;
 import org.apache.batik.transcoder.TranscoderInput;
@@ -58,7 +60,8 @@ class mycontroller {
     {
 
 
-        return "redirect:/main";
+
+        return "pages/index";
     }
     @Autowired
     private UserMapper userMapper;
@@ -163,6 +166,18 @@ class mycontroller {
         TranscoderOutput outputPngImage = new TranscoderOutput(pngFileStream);
         pngTranscoder.transcode(transcoderInput, outputPngImage);
         return fileName;
+
+    }
+    @ResponseBody
+    @PostMapping("/getModel")
+    public void getData() {
+        String parameters="type=SPOT&recvWindow=5000&timestamp="+System.currentTimeMillis();
+        String secretkey="NrNppXyOTbUQp5xk2nmCrKKwvkUIYwks9YF1ARSpUtiBrChkgUZCifCWG2s2X1yl";
+        String signature= EncryptTool.encryptSHA256(parameters,secretkey);
+        String str = parameters+"&signature="+signature;
+        System.out.println(str);
+        String data = new model().getData("https://api.binance.com/api/v3/ping", "GET ", null);
+        System.out.println(data);
 
     }
 }
