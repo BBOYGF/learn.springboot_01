@@ -175,13 +175,13 @@ class mycontroller {
     @ResponseBody
     @GetMapping("/getModel")
     public String getData() {
-        String parameters = "type=SPOT&recvWindow=5000&timestamp=" + System.currentTimeMillis();
-        String secretkey = "NrNppXyOTbUQp5xk2nmCrKKwvkUIYwks9YF1ARSpUtiBrChkgUZCifCWG2s2X1yl";
-        String signature = EncryptTool.encryptSHA256(parameters, secretkey);
-        String str = parameters + "&signature=" + signature;
-        System.out.println(str);
-        String data = new model().getData("https://api.binance.com/api/v3/ping", "GET ", null);
-        System.out.println(data);
-        return data;
+//        String parameters = "type=SPOT&recvWindow=5000&timestamp=" + System.currentTimeMillis();
+//        String secretkey = "NrNppXyOTbUQp5xk2nmCrKKwvkUIYwks9YF1ARSpUtiBrChkgUZCifCWG2s2X1yl";
+//        String signature = EncryptTool.encryptSHA256(parameters, secretkey);
+//        String str = parameters + "&signature=" + signature;
+//        System.out.println(str);
+//        String data = new model().getData("https://api.binance.com/api/v3/ping", "GET ", null);
+//        System.out.println(data);
+        return "======";
     }
 }
