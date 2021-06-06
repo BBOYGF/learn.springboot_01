@@ -11,6 +11,7 @@ import javax.net.ssl.TrustManager;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -37,17 +38,14 @@ public class model {
             connection.setConnectTimeout(5000);
             connection.setReadTimeout(5000);
             connection.setRequestMethod("GET");
-            connection.setRequestProperty("accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
-            connection.setRequestProperty("contentType", "UTF-8");
+            connection.setRequestProperty("accept", "application/json;charset=UTF-8");
             connection.setRequestProperty("scheme", "https");
-            connection.setRequestProperty("accept-encoding", "gzip, deflate, br");
             connection.setRequestProperty("accept-language", "zh-CN,zh;q=0.9");
             connection.setRequestProperty("sec-ch-ua-mobile", "?0");
             connection.setRequestProperty("sec-fetch-dest", "document");
             connection.setRequestProperty("sec-fetch-mode", "navigate");
             connection.setRequestProperty("sec-fetch-site", "none");
             connection.setRequestProperty("sec-fetch-user", "1");
-            connection.setRequestProperty("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36");
             connection.setUseCaches(false);
             connection.setRequestProperty("X-MBX-APIKEY", "99KbJ8zbzP3bWk5Coq3FYJzNUViUMJHqqfQbz631c12c7EqqqhfcnGot94MB8W44");
             System.out.println("====请求体是" + outputStr);
@@ -68,7 +66,7 @@ public class model {
                 inputStream = connection.getErrorStream();
             }
             // 从输入流读取返回内容
-            InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "UTF-8");
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "utf-8");
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             System.out.println("|" + "获取到了流");
             String str = null;
