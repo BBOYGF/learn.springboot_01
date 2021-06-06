@@ -1,4 +1,5 @@
 package com.learn.controller;
+
 import com.learn.bean.Education;
 import com.learn.mapper.UserMapper;
 import com.learn.model.model;
@@ -32,127 +33,129 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+
 @Slf4j
 @Controller
 class mycontroller {
 
     @Autowired
     myData mydata;
+
     @PostMapping("/login")
-    public String login( @RequestParam("username") String username, @RequestParam("password") String password, Model model, HttpSession session)
-    {
+    public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model, HttpSession session) {
 
 //        System.out.println("密码是："+password);
 ////        if(password.equals("123"))
 ////        {
-            System.out.println("密码正确！");
-            session.setAttribute("loginUser",username);
-             System.out.println("用户名是："+username);
-            return "pages/index";
+        System.out.println("密码正确！");
+        session.setAttribute("loginUser", username);
+        System.out.println("用户名是：" + username);
+        return "pages/index";
 //        }else {
 //            System.out.println("密码错误！！");
 //            model.addAttribute("msg","用户名或者密码错误！");
 //            return "pages/login";
 //        }
     }
-    @RequestMapping("/index")
-    public String index()
-    {
 
+    @RequestMapping("/index")
+    public String index() {
 
 
         return "pages/index";
     }
+
     @Autowired
     private UserMapper userMapper;
+
     @RequestMapping("/getAllUser")
-    public String getAllUser(Model model)
-    {
-        List<User> list=userMapper.querUserList();
-        model.addAttribute("userAll",list);
+    public String getAllUser(Model model) {
+        List<User> list = userMapper.querUserList();
+        model.addAttribute("userAll", list);
         log.info("测试log");
         return "pages/user";
     }
 
     @RequestMapping("/getPiugin")
-    public String getPiugin()
-    {
+    public String getPiugin() {
         return "/pages/piugin";
     }
 
     @GetMapping("/adduser")
-    public String addUser(Model model)
-    {
+    public String addUser(Model model) {
         List<Education> education = mydata.getEducation();
-        model.addAttribute("educations",education);
+        model.addAttribute("educations", education);
         return "pages/add";
     }
+
     @PostMapping("/adduser")
-    public String addUsers(User user)
-    {
+    public String addUsers(User user) {
         System.out.println(user.toString());
         userMapper.addUser(user);
         return "redirect:/getAllUaer";
     }
+
     @GetMapping("/updateUser/{id}")
-    public String update(@PathVariable int id, Model model)
-    {
+    public String update(@PathVariable int id, Model model) {
         User user = userMapper.querUserById(id);
         List<Education> education = mydata.getEducation();
-        model.addAttribute("educations",education);
-        model.addAttribute("user",user);
+        model.addAttribute("educations", education);
+        model.addAttribute("user", user);
 
         return "/pages/update";
     }
+
     @PostMapping("/updateUser")
-    public String update(User user)
-    {
+    public String update(User user) {
         userMapper.updateUser(user);
         System.out.println(user);
         return "redirect:/getAllUaer";
     }
+
     @GetMapping("/delete/{id}")
-    public String delete(@PathVariable int id )
-    {
+    public String delete(@PathVariable int id) {
         userMapper.deleteUser(id);
-        return  "redirect:/getAllUaer";
+        return "redirect:/getAllUaer";
     }
+
     @PostMapping("/upload")
     public String upload(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest request) throws IOException {
         //根据相对路径获取保存文件的绝对路径
         String realPath = System.getProperty("user.dir");//request.getSession().getServletContext().getRealPath("");
-        System.out.println("图片保存位置是："+realPath);
+        System.out.println("图片保存位置是：" + realPath);
         //获取文件的后缀
         String extension = FilenameUtils.getExtension(multipartFile.getOriginalFilename());
         //自定义文件名
         String fileName = UUID.randomUUID().toString().replace("-", "")
-                + new SimpleDateFormat("yyyy-MM-dd").format(new Date())+"."+extension;
-        System.out.println("图片的位置是："+fileName);
+                + new SimpleDateFormat("yyyy-MM-dd").format(new Date()) + "." + extension;
+        System.out.println("图片的位置是：" + fileName);
         //处理文件上传
-        multipartFile.transferTo(new File(realPath,fileName));
-        System.out.println("getOriginalFilename是："+multipartFile.getOriginalFilename());
-        System.out.println("getName是："+multipartFile.getName());
+        multipartFile.transferTo(new File(realPath, fileName));
+        System.out.println("getOriginalFilename是：" + multipartFile.getOriginalFilename());
+        System.out.println("getName是：" + multipartFile.getName());
         System.out.println("getName是：");
-        System.out.println("当前项目的路径地址是："+System.getProperty("user.dir"));
-        System.out.println("classes目录绝对路径1："+ ClassUtils.getDefaultClassLoader().getResource("").getPath());
-        System.out.println("classes目录绝对路径2："+ ResourceUtils.getURL("classpath:").getPath());
-        System.out.println("file是:"+request.getSession().getServletContext().getRealPath(""));
+        System.out.println("当前项目的路径地址是：" + System.getProperty("user.dir"));
+        System.out.println("classes目录绝对路径1：" + ClassUtils.getDefaultClassLoader().getResource("").getPath());
+        System.out.println("classes目录绝对路径2：" + ResourceUtils.getURL("classpath:").getPath());
+        System.out.println("file是:" + request.getSession().getServletContext().getRealPath(""));
         return "redirect:/getAllUaer";
     }
+
     @ResponseBody
     @PostMapping("/upload2")
-    public String upload2( String fileStr) throws IOException, TranscoderException {
+    public String upload2(String fileStr) throws IOException, TranscoderException {
 
         System.out.println(fileStr);
-        String fileName=savePic(fileStr);
-        return  fileName;
+        String fileName = savePic(fileStr);
+        return fileName;
     }
+
     public String savePic(String base64) throws IOException, TranscoderException {
         //定义一个字节数组
         byte[] imageByte;
-        BASE64Decoder decoder=new BASE64Decoder();//创建一个解码类
-        imageByte=decoder.decodeBuffer(base64);//解码为字节数组
-        ByteArrayInputStream bis=new ByteArrayInputStream(imageByte);//将字节数组转换为字节数组流
+        BASE64Decoder decoder = new BASE64Decoder();//创建一个解码类
+        imageByte = decoder.decodeBuffer(base64);//解码为字节数组
+        ByteArrayInputStream bis = new ByteArrayInputStream(imageByte);//将字节数组转换为字节数组流
         TranscoderInput transcoderInput = new TranscoderInput(bis);//将流转换为图片流
         PNGTranscoder pngTranscoder = new PNGTranscoder();//创建PNG转换流
         // 文件名称可根据自己的业务需求自定
@@ -168,16 +171,17 @@ class mycontroller {
         return fileName;
 
     }
+
     @ResponseBody
     @PostMapping("/getModel")
-    public void getData() {
-        String parameters="type=SPOT&recvWindow=5000&timestamp="+System.currentTimeMillis();
-        String secretkey="NrNppXyOTbUQp5xk2nmCrKKwvkUIYwks9YF1ARSpUtiBrChkgUZCifCWG2s2X1yl";
-        String signature= EncryptTool.encryptSHA256(parameters,secretkey);
-        String str = parameters+"&signature="+signature;
+    public String getData() {
+        String parameters = "type=SPOT&recvWindow=5000&timestamp=" + System.currentTimeMillis();
+        String secretkey = "NrNppXyOTbUQp5xk2nmCrKKwvkUIYwks9YF1ARSpUtiBrChkgUZCifCWG2s2X1yl";
+        String signature = EncryptTool.encryptSHA256(parameters, secretkey);
+        String str = parameters + "&signature=" + signature;
         System.out.println(str);
         String data = new model().getData("https://api.binance.com/api/v3/ping", "GET ", null);
         System.out.println(data);
-
+        return data;
     }
 }
