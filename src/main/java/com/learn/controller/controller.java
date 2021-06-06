@@ -180,8 +180,7 @@ class mycontroller {
         String signature = EncryptTool.encryptSHA256(parameters, secretkey);
         String str = parameters + "&signature=" + signature;
         System.out.println(str);
-        String data = new model().getData("https://api.binance.com/sapi/v1/capital/config/getall?"+str, "GET ", null);
-        //String data = new model().getData("https://www.baidu.com", "GET ", null);
+        String data = new model().getData("https://api.binance.com/sapi/v1/accountSnapshot?"+str, "GET ", null);
         System.out.println(data);
         return data;
     }
